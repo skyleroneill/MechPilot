@@ -121,6 +121,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &54868759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54868760}
+  m_Layer: 0
+  m_Name: Bottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &54868760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54868759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 392828112}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95260261
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +322,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300050, guid: fd419bef7a36af8459a810bc72573105, type: 3}
+  m_Sprite: {fileID: 21300030, guid: fd419bef7a36af8459a810bc72573105, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -315,6 +345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 247588177}
+  - {fileID: 54868760}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -393,7 +424,7 @@ GameObject:
   - component: {fileID: 756037459}
   - component: {fileID: 756037458}
   - component: {fileID: 756037460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TestGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,6 +664,7 @@ MonoBehaviour:
       fireAnimEvent: 
       rotateAim: 1
       onCoolDown: 0
+    moveEffects: []
   keyUpEffects:
   - upKey: 32
     projectileEffects:
@@ -658,6 +690,7 @@ MonoBehaviour:
       fireAnimEvent: 
       rotateAim: 1
       onCoolDown: 0
+    moveEffects: []
   keyHoldEffects:
   - holdKey: 32
     projectileEffects:
@@ -671,6 +704,70 @@ MonoBehaviour:
       angleOffset: 0
       fireAnimEvent: 
       rotateAim: 1
+      onCoolDown: 0
+    moveEffects: []
+  - holdKey: 100
+    projectileEffects: []
+    moveEffects:
+    - movingRB: {fileID: 392828114}
+      moveDirection: {x: 1, y: 0}
+      moveType: 0
+      coolDown: 0
+      speed: 3
+      moveAnimEvent: 
+      rotateAim: 0
+      mustBeGrounded: 0
+      groundCheckParams:
+        origin: {fileID: 0}
+        size: {x: 0, y: 0}
+        angle: 0
+        direction: {x: 0, y: 0}
+        distance: 0
+        layerMask:
+          serializedVersion: 2
+          m_Bits: 0
+      onCoolDown: 0
+  - holdKey: 97
+    projectileEffects: []
+    moveEffects:
+    - movingRB: {fileID: 392828114}
+      moveDirection: {x: -1, y: 0}
+      moveType: 0
+      coolDown: 0
+      speed: 3
+      moveAnimEvent: 
+      rotateAim: 0
+      mustBeGrounded: 0
+      groundCheckParams:
+        origin: {fileID: 0}
+        size: {x: 0, y: 0}
+        angle: 0
+        direction: {x: 0, y: 0}
+        distance: 0
+        layerMask:
+          serializedVersion: 2
+          m_Bits: 0
+      onCoolDown: 0
+  - holdKey: 119
+    projectileEffects: []
+    moveEffects:
+    - movingRB: {fileID: 392828114}
+      moveDirection: {x: 0, y: 1}
+      moveType: 2
+      coolDown: 0.05
+      speed: 5
+      moveAnimEvent: 
+      rotateAim: 0
+      mustBeGrounded: 1
+      groundCheckParams:
+        origin: {fileID: 54868760}
+        size: {x: 0.9, y: 0.1}
+        angle: 0
+        direction: {x: 0, y: -1}
+        distance: 0
+        layerMask:
+          serializedVersion: 2
+          m_Bits: 1024
       onCoolDown: 0
 --- !u!4 &1763407051
 Transform:
