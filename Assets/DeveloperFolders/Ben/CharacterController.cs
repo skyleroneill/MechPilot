@@ -11,7 +11,8 @@ public class CharacterController : MonoBehaviour
     private bool canJump;
     private Rigidbody2D rb2d;
     
-    public Transform feetPosition; 
+    public Transform feetPosition;
+    public LayerMask groundLayer;
     
     void Start()
     {
@@ -20,6 +21,8 @@ public class CharacterController : MonoBehaviour
     
     void Update()
     {
+        if (isGrounded) canJump = true;
+        
         Jump();
         
         var movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
@@ -28,7 +31,7 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(feetPosition.position, 0.5f);
+        isGrounded = Physics2D.OverlapCircle(feetPosition.position, 0.5f, groundLayer);
         print($"Player is on the ground: {isGrounded}");
     }
 
@@ -40,9 +43,10 @@ public class CharacterController : MonoBehaviour
             {
                 JumpDown();
             }
-            else
+            else if (canJump)
             {
                 rb2d.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+                canJump = false;
             }
             
         }
