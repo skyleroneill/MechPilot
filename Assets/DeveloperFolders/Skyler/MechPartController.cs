@@ -19,12 +19,40 @@ public struct ProjectileEffect
 }
 
 [System.Serializable]
+public struct MoveEffect
+{
+    public enum MoveType { Velocity, Force, Impulse }
+    public Rigidbody2D movingRB;
+    public Vector2 moveDirection;
+    public MoveType moveType;
+    public float coolDown;
+    public float speed;
+    public string moveAnimEvent;
+    public bool rotateAim;
+    public bool mustBeGrounded;
+    public BoxCastParameters groundCheckParams;
+    [HideInInspector]
+    public bool onCoolDown;
+}
+
+[System.Serializable]
+public struct BoxCastParameters
+{
+    public Transform origin;
+    public Vector2 size;
+    public float angle;
+    public Vector2 direction;
+    public float distance;
+    public LayerMask layerMask;
+}
+
+[System.Serializable]
 public struct KeyDownEffects
 {
     public KeyCode downKey;
     public ProjectileEffect[] projectileEffects;
     //public MeleeEffect[] meleeEffects;
-    //public MovementEffect[] movementEffects;
+    public MoveEffect[] moveEffects;
 }
 
 [System.Serializable]
@@ -33,7 +61,7 @@ public struct KeyUpEffects
     public KeyCode upKey;
     public ProjectileEffect[] projectileEffects;
     //public MeleeEffect[] meleeEffects;
-    //public MovementEffect[] movementEffects;
+    public MoveEffect[] moveEffects;
 }
 
 [System.Serializable]
@@ -42,7 +70,7 @@ public struct KeyHoldEffects
     public KeyCode holdKey;
     public ProjectileEffect[] projectileEffects;
     //public MeleeEffect[] meleeEffects;
-    //public MovementEffect[] movementEffects;
+    public MoveEffect[] moveEffects;
 }
 
 public class MechPartController : MonoBehaviour
@@ -116,10 +144,38 @@ public class MechPartController : MonoBehaviour
                 //}
 
                 // Move effects
-                //for (j = 0; j < keyDownEffects[i].projectileEffects.Length; j++)
-                //{
+                for (j = 0; j < keyDownEffects[i].moveEffects.Length; j++)
+                {
+                    if (!keyDownEffects[i].moveEffects[j].movingRB || keyDownEffects[i].moveEffects[j].onCoolDown)
+                        continue;
 
-                //}
+                    // Must the mech be grounded to perform this effect
+                    if (keyDownEffects[i].moveEffects[j].mustBeGrounded)
+                    {
+                        // Skip iteration if nothing is hit by box cast
+                        RaycastHit2D hit = CheckOnGround(keyDownEffects[i].moveEffects[j].groundCheckParams);
+                        if (!hit.collider)
+                            continue;
+                    }
+
+                    // Set velocity move event
+                    if (keyDownEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Velocity)
+                    {
+                        Vector2 direction = keyDownEffects[i].moveEffects[j].moveDirection.normalized * keyDownEffects[i].moveEffects[j].speed;
+                        direction += Vector2.up * keyDownEffects[i].moveEffects[j].movingRB.velocity.y;
+                        keyDownEffects[i].moveEffects[j].movingRB.velocity = direction;
+                    }
+                    else if (keyDownEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Force)
+                    {
+                        keyDownEffects[i].moveEffects[j].movingRB.AddForce(keyDownEffects[i].moveEffects[j].moveDirection.normalized * keyDownEffects[i].moveEffects[j].speed,
+                                                                           ForceMode2D.Force);
+                    }
+                    else if (keyDownEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Impulse)
+                    {
+                        keyDownEffects[i].moveEffects[j].movingRB.AddForce(keyDownEffects[i].moveEffects[j].moveDirection.normalized * keyDownEffects[i].moveEffects[j].speed,
+                                                                           ForceMode2D.Impulse);
+                    }
+                }
             }
         }
     }
@@ -173,10 +229,38 @@ public class MechPartController : MonoBehaviour
                 //}
 
                 // Move effects
-                //for (j = 0; j < keyDownEffects[i].projectileEffects.Length; j++)
-                //{
+                for(j = 0; j < keyUpEffects[i].moveEffects.Length; j++)
+                {
+                    if (!keyUpEffects[i].moveEffects[j].movingRB || keyUpEffects[i].moveEffects[j].onCoolDown)
+                        continue;
 
-                //}
+                    // Must the mech be grounded to perform this effect
+                    if (keyUpEffects[i].moveEffects[j].mustBeGrounded)
+                    {
+                        // Skip iteration if nothing is hit by box cast
+                        RaycastHit2D hit = CheckOnGround(keyUpEffects[i].moveEffects[j].groundCheckParams);
+                        if (!hit.collider)
+                            continue;
+                    }
+
+                    // Set velocity move event
+                    if (keyUpEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Velocity)
+                    {
+                        Vector2 direction = keyUpEffects[i].moveEffects[j].moveDirection.normalized * keyUpEffects[i].moveEffects[j].speed;
+                        direction += Vector2.up * keyUpEffects[i].moveEffects[j].movingRB.velocity.y;
+                        keyUpEffects[i].moveEffects[j].movingRB.velocity = direction;
+                    }
+                    else if (keyUpEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Force)
+                    {
+                        keyUpEffects[i].moveEffects[j].movingRB.AddForce(keyUpEffects[i].moveEffects[j].moveDirection.normalized * keyUpEffects[i].moveEffects[j].speed,
+                                                                           ForceMode2D.Force);
+                    }
+                    else if (keyUpEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Impulse)
+                    {
+                        keyUpEffects[i].moveEffects[j].movingRB.AddForce(keyUpEffects[i].moveEffects[j].moveDirection.normalized * keyUpEffects[i].moveEffects[j].speed,
+                                                                           ForceMode2D.Impulse);
+                    }
+                }
             }
         }
     }
@@ -224,18 +308,54 @@ public class MechPartController : MonoBehaviour
                 }
 
                 // Melee effects
-                //for (j = 0; j < keyDownEffects[i].projectileEffects.Length; j++)
+                //for (j = 0; j < keyHoldEffects[i].meleeEffects.Length; j++)
                 //{
 
                 //}
 
                 // Move effects
-                //for (j = 0; j < keyDownEffects[i].projectileEffects.Length; j++)
-                //{
+                for (j = 0; j < keyHoldEffects[i].moveEffects.Length; j++)
+                {
+                    if (!keyHoldEffects[i].moveEffects[j].movingRB || keyHoldEffects[i].moveEffects[j].onCoolDown)
+                        continue;
 
-                //}
+                    // Must the mech be grounded to perform this effect
+                    if (keyHoldEffects[i].moveEffects[j].mustBeGrounded)
+                    {
+                        // Skip iteration if nothing is hit by box cast
+                        RaycastHit2D hit = CheckOnGround(keyHoldEffects[i].moveEffects[j].groundCheckParams);
+                        if (!hit.collider)
+                            continue;
+                    }
+
+                    // Set velocity move event
+                    if (keyHoldEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Velocity)
+                    {
+                        Vector2 direction = keyHoldEffects[i].moveEffects[j].moveDirection.normalized * keyHoldEffects[i].moveEffects[j].speed;
+                        direction += Vector2.up * keyHoldEffects[i].moveEffects[j].movingRB.velocity.y;
+                        keyHoldEffects[i].moveEffects[j].movingRB.velocity = direction;
+                    }
+                    else if(keyHoldEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Force)
+                    {
+                        keyHoldEffects[i].moveEffects[j].movingRB.AddForce(keyHoldEffects[i].moveEffects[j].moveDirection.normalized * keyHoldEffects[i].moveEffects[j].speed, 
+                                                                           ForceMode2D.Force);
+                    }
+                    else if(keyHoldEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Impulse)
+                    {
+                        keyHoldEffects[i].moveEffects[j].movingRB.AddForce(keyHoldEffects[i].moveEffects[j].moveDirection.normalized * keyHoldEffects[i].moveEffects[j].speed,
+                                                                           ForceMode2D.Impulse);
+                    }
+
+                    StartCoroutine(MoveEffectCoolDownTime(KeyType.KeyHold, i, j));
+                }
             }
         }
+    }
+
+    private RaycastHit2D CheckOnGround(BoxCastParameters castParams)
+    {
+        return Physics2D.BoxCast(castParams.origin.position, castParams.size, castParams.angle,
+                                 castParams.direction, castParams.distance, castParams.layerMask.value);
     }
 
     IEnumerator ProjectileEffectCoolDownTime(KeyType type, int keyEffect, int projectileEffect)
@@ -258,8 +378,7 @@ public class MechPartController : MonoBehaviour
                 yield return new WaitForSeconds(keyHoldEffects[keyEffect].projectileEffects[projectileEffect].coolDown);
                 keyHoldEffects[keyEffect].projectileEffects[projectileEffect].onCoolDown = false;
                 break;
-        }
-        
+        }     
     }
 
     //IEnumerator MeleeEffectCoolDownTime(MeleeEffect effect)
@@ -269,10 +388,27 @@ public class MechPartController : MonoBehaviour
     //    effect.onCoolDown = false;
     //}
 
-    //IEnumerator MoveEffectCoolDownTime(MoveEffect effect)
-    //{
-    //    effect.onCoolDown = true;
-    //    yield return new WaitForSeconds(effect.coolDown);
-    //    effect.onCoolDown = false;
-    //}
+    IEnumerator MoveEffectCoolDownTime(KeyType type, int keyEffect, int moveEffect)
+    {
+        switch (type)
+        {
+            case KeyType.KeyDown:
+                keyDownEffects[keyEffect].moveEffects[moveEffect].onCoolDown = true;
+                yield return new WaitForSeconds(keyDownEffects[keyEffect].moveEffects[moveEffect].coolDown);
+                keyDownEffects[keyEffect].moveEffects[moveEffect].onCoolDown = false;
+                break;
+
+            case KeyType.KeyUp:
+                keyUpEffects[keyEffect].moveEffects[moveEffect].onCoolDown = true;
+                yield return new WaitForSeconds(keyUpEffects[keyEffect].moveEffects[moveEffect].coolDown);
+                keyUpEffects[keyEffect].moveEffects[moveEffect].onCoolDown = false;
+                break;
+
+            case KeyType.KeyHold:
+                keyHoldEffects[keyEffect].moveEffects[moveEffect].onCoolDown = true;
+                yield return new WaitForSeconds(keyHoldEffects[keyEffect].moveEffects[moveEffect].coolDown);
+                keyHoldEffects[keyEffect].moveEffects[moveEffect].onCoolDown = false;
+                break;
+        }
+    }
 }

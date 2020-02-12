@@ -33,10 +33,12 @@ public static class Vector3Extensions
 	{
 		vect3 = new Vector3(newX + vect3.x, vect3.y, vect3.z);
 	}
+
 	public static void AddToY(this ref Vector3 vect3, float newY)
 	{
 		vect3 = new Vector3(vect3.x, newY + vect3.y, vect3.z);
 	}
+
 	public static void AddToZ(this ref Vector3 vect3, float newZ)
 	{
 		vect3 = new Vector3(vect3.x, vect3.y, newZ + vect3.z);
