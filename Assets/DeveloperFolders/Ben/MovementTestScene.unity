@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 342748316}
   - component: {fileID: 342748315}
   - component: {fileID: 342748318}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 3rd Floor L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 405763607}
   - component: {fileID: 405763606}
   - component: {fileID: 405763605}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 2nd Floor R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 506844226}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ea9ea04631f0aad4f901edbd8ffd8b30, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -516,6 +516,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feetPosition: {fileID: 1573264473}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &538462613
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +532,7 @@ GameObject:
   - component: {fileID: 538462616}
   - component: {fileID: 538462615}
   - component: {fileID: 538462618}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 1st Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +741,7 @@ GameObject:
   - component: {fileID: 713914140}
   - component: {fileID: 713914139}
   - component: {fileID: 713914142}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 2nd Floor L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,7 +867,7 @@ GameObject:
   - component: {fileID: 771530568}
   - component: {fileID: 771530567}
   - component: {fileID: 771530566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 3rd Floor R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
