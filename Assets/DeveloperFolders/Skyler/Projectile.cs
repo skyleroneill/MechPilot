@@ -11,12 +11,6 @@ public class Projectile : MonoBehaviour
     [Tooltip("The amount of hit point damage this attack will do.")]
     [SerializeField]
     protected int power = 1;
-    [Tooltip("The amount of knockback this projectile will appy when it hits an object that can be knocked back. Zero or fewer results in no knockback.")]
-    [SerializeField]
-    protected float knockbackForce = 0f;
-    [Tooltip("The amount of time in seconds that objects hit by this projectile will be stunned. Values of zero or less result in no hitstun.")]
-    [SerializeField]
-    protected float hitstunDuration = 0f;
     [Tooltip("The layers that this projectile will ignore.")]
     [SerializeField]
     protected List<int> ignoreLayers;

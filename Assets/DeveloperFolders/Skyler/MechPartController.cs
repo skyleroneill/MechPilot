@@ -12,8 +12,23 @@ public struct ProjectileEffect
     public float speed;
     public float lifeTime;
     public float angleOffset;
-    public string fireAnimEvent;
+    public float effectDelay;
     public bool rotateAim;
+    // TODO: Ignore layers
+    [HideInInspector]
+    public bool onCoolDown;
+}
+
+[System.Serializable]
+public struct MeleeEffect
+{
+    public GameObject hitBox;
+    public Transform firePoint;
+    public int power;
+    public float coolDown;
+    public float lifeTime;
+    public float effectDelay;
+    public bool hitBoxAsChild;
     [HideInInspector]
     public bool onCoolDown;
 }
@@ -27,7 +42,7 @@ public struct MoveEffect
     public MoveType moveType;
     public float coolDown;
     public float speed;
-    public string moveAnimEvent;
+    public float effectDelay;
     public bool rotateAim;
     public bool mustBeGrounded;
     public BoxCastParameters groundCheckParams;
@@ -51,7 +66,7 @@ public struct KeyDownEffects
 {
     public KeyCode downKey;
     public ProjectileEffect[] projectileEffects;
-    //public MeleeEffect[] meleeEffects;
+    public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
 }
 
@@ -60,7 +75,7 @@ public struct KeyUpEffects
 {
     public KeyCode upKey;
     public ProjectileEffect[] projectileEffects;
-    //public MeleeEffect[] meleeEffects;
+    public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
 }
 
@@ -69,7 +84,7 @@ public struct KeyHoldEffects
 {
     public KeyCode holdKey;
     public ProjectileEffect[] projectileEffects;
-    //public MeleeEffect[] meleeEffects;
+    public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
 }
 
@@ -84,16 +99,40 @@ public class MechPartController : MonoBehaviour
     public KeyUpEffects[] keyUpEffects;
     public KeyHoldEffects[] keyHoldEffects;
 
-    private enum KeyType {KeyDown, KeyUp, KeyHold}
+    private bool moving = false;
+    private Animator anim;
+
+
+    private enum KeyType { KeyDown, KeyUp, KeyHold }
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
         if (!active)
             return;
 
+        // Rotate to part to aim at cursor
+        if (rotatePartToCursor)
+        {
+            Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            diff.Normalize();
+            transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
+        }
+
         KeyDown();
         KeyUp();
         KeyHold();
+
+        // HACK: Stop moving animation
+        if (anim && !moving)
+        {
+            anim.SetBool("moving", false);
+        }
+        moving = false;
     }
 
     private void KeyDown()
@@ -108,73 +147,19 @@ public class MechPartController : MonoBehaviour
                 // Projectile effects
                 for (j = 0; j < keyDownEffects[i].projectileEffects.Length; j++)
                 {
-                    if (keyDownEffects[i].projectileEffects[j].onCoolDown)
-                        continue;
-
-                    Projectile newProjectile = Instantiate(keyDownEffects[i].projectileEffects[j].projectile,
-                                                           keyDownEffects[i].projectileEffects[j].firePoint.position,
-                                                           keyDownEffects[i].projectileEffects[j].firePoint.rotation).GetComponent<Projectile>();
-
-                    if (!newProjectile)
-                        continue;
-
-                    // Rotate to aim at cursor
-                    if (keyDownEffects[i].projectileEffects[j].rotateAim)
-                    {
-                        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - keyDownEffects[i].projectileEffects[j].firePoint.position;
-                        diff.Normalize();
-                        keyDownEffects[i].projectileEffects[j].firePoint.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
-                    }
-
-                    Vector3 rotatedVector = Quaternion.AngleAxis(keyDownEffects[i].projectileEffects[j].angleOffset, Vector3.forward) * keyDownEffects[i].projectileEffects[j].firePoint.right;
-                    newProjectile.SetDirection(rotatedVector);
-                    newProjectile.SetPower(keyDownEffects[i].projectileEffects[j].power);
-                    newProjectile.SetSpeed(keyDownEffects[i].projectileEffects[j].speed);
-                    newProjectile.SetShooter(gameObject);
-                    newProjectile.SetLifeTime(keyDownEffects[i].projectileEffects[j].lifeTime);
-                    // TODO: Add ignore layers?
-
-                    StartCoroutine(ProjectileEffectCoolDownTime(KeyType.KeyDown, i, j));
+                    PerformProjectileEffect(keyDownEffects[i].projectileEffects[j], KeyType.KeyDown, i, j);
                 }
 
                 // Melee effects
-                //for (j = 0; j < keyDownEffects[i].projectileEffects.Length; j++)
-                //{
-
-                //}
+                for (j = 0; j < keyDownEffects[i].meleeEffects.Length; j++)
+                {
+                    PerformMeleeEffect(keyDownEffects[i].meleeEffects[j], KeyType.KeyDown, i, j);
+                }
 
                 // Move effects
                 for (j = 0; j < keyDownEffects[i].moveEffects.Length; j++)
                 {
-                    if (!keyDownEffects[i].moveEffects[j].movingRB || keyDownEffects[i].moveEffects[j].onCoolDown)
-                        continue;
-
-                    // Must the mech be grounded to perform this effect
-                    if (keyDownEffects[i].moveEffects[j].mustBeGrounded)
-                    {
-                        // Skip iteration if nothing is hit by box cast
-                        RaycastHit2D hit = CheckOnGround(keyDownEffects[i].moveEffects[j].groundCheckParams);
-                        if (!hit.collider)
-                            continue;
-                    }
-
-                    // Set velocity move event
-                    if (keyDownEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Velocity)
-                    {
-                        Vector2 direction = keyDownEffects[i].moveEffects[j].moveDirection.normalized * keyDownEffects[i].moveEffects[j].speed;
-                        direction += Vector2.up * keyDownEffects[i].moveEffects[j].movingRB.velocity.y;
-                        keyDownEffects[i].moveEffects[j].movingRB.velocity = direction;
-                    }
-                    else if (keyDownEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Force)
-                    {
-                        keyDownEffects[i].moveEffects[j].movingRB.AddForce(keyDownEffects[i].moveEffects[j].moveDirection.normalized * keyDownEffects[i].moveEffects[j].speed,
-                                                                           ForceMode2D.Force);
-                    }
-                    else if (keyDownEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Impulse)
-                    {
-                        keyDownEffects[i].moveEffects[j].movingRB.AddForce(keyDownEffects[i].moveEffects[j].moveDirection.normalized * keyDownEffects[i].moveEffects[j].speed,
-                                                                           ForceMode2D.Impulse);
-                    }
+                    PerformMoveEffect(keyDownEffects[i].moveEffects[j], KeyType.KeyDown, i, j);
                 }
             }
         }
@@ -193,73 +178,19 @@ public class MechPartController : MonoBehaviour
                 // Projectile effects
                 for (j = 0; j < keyUpEffects[i].projectileEffects.Length; j++)
                 {
-                    if (keyUpEffects[i].projectileEffects[j].onCoolDown)
-                        continue;
-
-                    Projectile newProjectile = Instantiate(keyUpEffects[i].projectileEffects[j].projectile,
-                                                           keyUpEffects[i].projectileEffects[j].firePoint.position,
-                                                           keyUpEffects[i].projectileEffects[j].firePoint.rotation).GetComponent<Projectile>();
-
-                    if (!newProjectile)
-                        continue;
-
-                    // Rotate to aim at cursor
-                    if (keyUpEffects[i].projectileEffects[j].rotateAim)
-                    {
-                        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - keyUpEffects[i].projectileEffects[j].firePoint.position;
-                        diff.Normalize();
-                        keyUpEffects[i].projectileEffects[j].firePoint.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
-                    }
-
-                    Vector3 rotatedVector = Quaternion.AngleAxis(keyUpEffects[i].projectileEffects[j].angleOffset, Vector3.forward) * keyUpEffects[i].projectileEffects[j].firePoint.right;
-                    newProjectile.SetDirection(rotatedVector);
-                    newProjectile.SetPower(keyUpEffects[i].projectileEffects[j].power);
-                    newProjectile.SetSpeed(keyUpEffects[i].projectileEffects[j].speed);
-                    newProjectile.SetShooter(gameObject);
-                    newProjectile.SetLifeTime(keyUpEffects[i].projectileEffects[j].lifeTime);
-                    // TODO: Add ignore layers?
-
-                    StartCoroutine(ProjectileEffectCoolDownTime(KeyType.KeyUp, i, j));
+                    PerformProjectileEffect(keyUpEffects[i].projectileEffects[j], KeyType.KeyUp, i, j);
                 }
 
                 // Melee effects
-                //for (j = 0; j < keyDownEffects[i].projectileEffects.Length; j++)
-                //{
-
-                //}
+                for (j = 0; j < keyUpEffects[i].meleeEffects.Length; j++)
+                {
+                    PerformMeleeEffect(keyUpEffects[i].meleeEffects[j], KeyType.KeyUp, i, j);
+                }
 
                 // Move effects
-                for(j = 0; j < keyUpEffects[i].moveEffects.Length; j++)
+                for (j = 0; j < keyUpEffects[i].moveEffects.Length; j++)
                 {
-                    if (!keyUpEffects[i].moveEffects[j].movingRB || keyUpEffects[i].moveEffects[j].onCoolDown)
-                        continue;
-
-                    // Must the mech be grounded to perform this effect
-                    if (keyUpEffects[i].moveEffects[j].mustBeGrounded)
-                    {
-                        // Skip iteration if nothing is hit by box cast
-                        RaycastHit2D hit = CheckOnGround(keyUpEffects[i].moveEffects[j].groundCheckParams);
-                        if (!hit.collider)
-                            continue;
-                    }
-
-                    // Set velocity move event
-                    if (keyUpEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Velocity)
-                    {
-                        Vector2 direction = keyUpEffects[i].moveEffects[j].moveDirection.normalized * keyUpEffects[i].moveEffects[j].speed;
-                        direction += Vector2.up * keyUpEffects[i].moveEffects[j].movingRB.velocity.y;
-                        keyUpEffects[i].moveEffects[j].movingRB.velocity = direction;
-                    }
-                    else if (keyUpEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Force)
-                    {
-                        keyUpEffects[i].moveEffects[j].movingRB.AddForce(keyUpEffects[i].moveEffects[j].moveDirection.normalized * keyUpEffects[i].moveEffects[j].speed,
-                                                                           ForceMode2D.Force);
-                    }
-                    else if (keyUpEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Impulse)
-                    {
-                        keyUpEffects[i].moveEffects[j].movingRB.AddForce(keyUpEffects[i].moveEffects[j].moveDirection.normalized * keyUpEffects[i].moveEffects[j].speed,
-                                                                           ForceMode2D.Impulse);
-                    }
+                    PerformMoveEffect(keyUpEffects[i].moveEffects[j], KeyType.KeyUp, i, j);
                 }
             }
         }
@@ -278,77 +209,185 @@ public class MechPartController : MonoBehaviour
                 // Projectile effects
                 for (j = 0; j < keyHoldEffects[i].projectileEffects.Length; j++)
                 {
-                    if (keyHoldEffects[i].projectileEffects[j].onCoolDown)
-                        continue;
-
-                    Projectile newProjectile = Instantiate(keyHoldEffects[i].projectileEffects[j].projectile,
-                                                           keyHoldEffects[i].projectileEffects[j].firePoint.position,
-                                                           keyHoldEffects[i].projectileEffects[j].firePoint.rotation).GetComponent<Projectile>();
-
-                    if (!newProjectile)
-                        continue;
-
-                    // Rotate to aim at cursor
-                    if (keyHoldEffects[i].projectileEffects[j].rotateAim)
-                    {
-                        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - keyHoldEffects[i].projectileEffects[j].firePoint.position;
-                        diff.Normalize();
-                        keyHoldEffects[i].projectileEffects[j].firePoint.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
-                    }
-
-                    Vector3 rotatedVector = Quaternion.AngleAxis(keyHoldEffects[i].projectileEffects[j].angleOffset, Vector3.forward) * keyHoldEffects[i].projectileEffects[j].firePoint.right;
-                    newProjectile.SetDirection(rotatedVector);
-                    newProjectile.SetPower(keyHoldEffects[i].projectileEffects[j].power);
-                    newProjectile.SetSpeed(keyHoldEffects[i].projectileEffects[j].speed);
-                    newProjectile.SetShooter(gameObject);
-                    newProjectile.SetLifeTime(keyHoldEffects[i].projectileEffects[j].lifeTime);
-                    // TODO: Add ignore layers?
-
-                    StartCoroutine(ProjectileEffectCoolDownTime(KeyType.KeyHold, i, j));
+                    PerformProjectileEffect(keyHoldEffects[i].projectileEffects[j], KeyType.KeyHold, i, j);
                 }
 
                 // Melee effects
-                //for (j = 0; j < keyHoldEffects[i].meleeEffects.Length; j++)
-                //{
-
-                //}
+                for (j = 0; j < keyHoldEffects[i].meleeEffects.Length; j++)
+                {
+                    PerformMeleeEffect(keyHoldEffects[i].meleeEffects[j], KeyType.KeyHold, i, j);
+                }
 
                 // Move effects
                 for (j = 0; j < keyHoldEffects[i].moveEffects.Length; j++)
                 {
-                    if (!keyHoldEffects[i].moveEffects[j].movingRB || keyHoldEffects[i].moveEffects[j].onCoolDown)
-                        continue;
-
-                    // Must the mech be grounded to perform this effect
-                    if (keyHoldEffects[i].moveEffects[j].mustBeGrounded)
-                    {
-                        // Skip iteration if nothing is hit by box cast
-                        RaycastHit2D hit = CheckOnGround(keyHoldEffects[i].moveEffects[j].groundCheckParams);
-                        if (!hit.collider)
-                            continue;
-                    }
-
-                    // Set velocity move event
-                    if (keyHoldEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Velocity)
-                    {
-                        Vector2 direction = keyHoldEffects[i].moveEffects[j].moveDirection.normalized * keyHoldEffects[i].moveEffects[j].speed;
-                        direction += Vector2.up * keyHoldEffects[i].moveEffects[j].movingRB.velocity.y;
-                        keyHoldEffects[i].moveEffects[j].movingRB.velocity = direction;
-                    }
-                    else if(keyHoldEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Force)
-                    {
-                        keyHoldEffects[i].moveEffects[j].movingRB.AddForce(keyHoldEffects[i].moveEffects[j].moveDirection.normalized * keyHoldEffects[i].moveEffects[j].speed, 
-                                                                           ForceMode2D.Force);
-                    }
-                    else if(keyHoldEffects[i].moveEffects[j].moveType == MoveEffect.MoveType.Impulse)
-                    {
-                        keyHoldEffects[i].moveEffects[j].movingRB.AddForce(keyHoldEffects[i].moveEffects[j].moveDirection.normalized * keyHoldEffects[i].moveEffects[j].speed,
-                                                                           ForceMode2D.Impulse);
-                    }
-
-                    StartCoroutine(MoveEffectCoolDownTime(KeyType.KeyHold, i, j));
+                    PerformMoveEffect(keyHoldEffects[i].moveEffects[j], KeyType.KeyHold, i, j);
                 }
             }
+        }
+    }
+
+    private void PerformProjectileEffect(ProjectileEffect effect, KeyType type, int keyEffect, int projectileEffect)
+    {
+        // Don't do anything if on cool down
+        if (effect.onCoolDown)
+            return;
+
+        // Perform cool down
+        if (effect.coolDown > 0f && !effect.onCoolDown)
+            StartCoroutine(ProjectileEffectCoolDownTime(type, keyEffect, projectileEffect));
+
+        // Play fire animation
+        if (anim)
+        {
+            anim.SetTrigger("fire");
+        }
+
+        // Delay effect for specified amount of time
+        if(effect.effectDelay > 0)
+        {
+            StartCoroutine(WaitForProjectileDelay(effect));
+            return;
+        }
+
+        SpawnProjectile(effect);
+    }
+
+    private void SpawnProjectile(ProjectileEffect effect)
+    {
+        // Rotate to aim at cursor
+        if (effect.rotateAim)
+        {
+            Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - effect.firePoint.position;
+            diff.Normalize();
+            effect.firePoint.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
+        }
+
+        Projectile newProjectile = Instantiate(effect.projectile,
+                                               effect.firePoint.position,
+                                               effect.firePoint.rotation).GetComponent<Projectile>();
+
+        // Failed to create a new projectile
+        if (!newProjectile)
+            return;
+
+        // Initialize the projectile
+        Vector3 rotatedVector = Quaternion.AngleAxis(effect.angleOffset, Vector3.forward) * effect.firePoint.right;
+        newProjectile.SetDirection(rotatedVector);
+        newProjectile.SetPower(effect.power);
+        newProjectile.SetSpeed(effect.speed);
+        newProjectile.SetShooter(gameObject);
+        newProjectile.SetLifeTime(effect.lifeTime);
+        // TODO: Add ignore layers
+    }
+
+    private void PerformMeleeEffect(MeleeEffect effect, KeyType type, int keyEffect, int meleeEffect)
+    {
+        // Don't do anything if on cool down
+        if (effect.onCoolDown)
+            return;
+
+        // Perform cool down
+        if (effect.coolDown > 0f && !effect.onCoolDown)
+            StartCoroutine(MeleeEffectCoolDownTime(type, keyEffect, meleeEffect));
+
+        // Play fire animation
+        if (anim)
+        {
+            anim.SetTrigger("fire");
+        }
+
+        // Delay effect for specified amount of time
+        if (effect.effectDelay > 0)
+        {
+            StartCoroutine(WaitForMeleeDelay(effect));
+            return;
+        }
+
+        SpawnMeleeHitBox(effect);
+    }
+
+    private void SpawnMeleeHitBox(MeleeEffect effect)
+    {
+        HitBox newHitBox;
+
+        // Spawn hit box as child of fire point
+        if (effect.hitBoxAsChild)
+            newHitBox = Instantiate(effect.hitBox,
+                                 effect.firePoint.position,
+                                 effect.firePoint.rotation,
+                                 effect.firePoint).GetComponent<HitBox>();
+        // Spawn hit box not as child
+        else
+            newHitBox = Instantiate(effect.hitBox, 
+                                 effect.firePoint.position,
+                                 effect.firePoint.rotation).GetComponent<HitBox>();
+
+        if (!newHitBox)
+            return;
+
+        newHitBox.SetPower(effect.power);
+        newHitBox.SetLifeTime(effect.lifeTime);
+        newHitBox.SetAttacker(gameObject);
+        // TODO: Add ignore layers
+    }
+
+    private void PerformMoveEffect(MoveEffect effect, KeyType type, int keyEffect, int moveEffect)
+    {
+        if (!effect.movingRB || effect.onCoolDown)
+        {
+            return;
+        }
+
+        // Must the mech be grounded to perform this effect
+        if (effect.mustBeGrounded)
+        {
+            // Skip iteration if nothing is hit by box cast
+            RaycastHit2D hit = CheckOnGround(effect.groundCheckParams);
+            if (!hit.collider)
+                return;
+        }
+
+        // Perform cool down
+        if (effect.coolDown > 0f && !effect.onCoolDown)
+            StartCoroutine(MoveEffectCoolDownTime(type, keyEffect, moveEffect));
+
+        // Play moving animation
+        if (anim)
+        {
+            anim.SetBool("moving", true);
+        }
+
+        // Delay effect for specified amount of time
+        if (effect.effectDelay > 0)
+        {
+            StartCoroutine(WaitForMoveDelay(effect));
+            return;
+        }
+
+        MoveRB(effect);
+    }
+
+    private void MoveRB(MoveEffect effect)
+    {
+        moving = true;
+
+        // Set velocity move event
+        if (effect.moveType == MoveEffect.MoveType.Velocity)
+        {
+            Vector2 direction = effect.moveDirection.normalized * effect.speed;
+            direction += Vector2.up * effect.movingRB.velocity.y;
+            effect.movingRB.velocity = direction;
+        }
+        else if (effect.moveType == MoveEffect.MoveType.Force)
+        {
+            effect.movingRB.AddForce(effect.moveDirection.normalized * effect.speed,
+                                                               ForceMode2D.Force);
+        }
+        else if (effect.moveType == MoveEffect.MoveType.Impulse)
+        {
+            effect.movingRB.AddForce(effect.moveDirection.normalized * effect.speed,
+                                                               ForceMode2D.Impulse);
         }
     }
 
@@ -356,6 +395,24 @@ public class MechPartController : MonoBehaviour
     {
         return Physics2D.BoxCast(castParams.origin.position, castParams.size, castParams.angle,
                                  castParams.direction, castParams.distance, castParams.layerMask.value);
+    }
+
+    IEnumerator WaitForProjectileDelay(ProjectileEffect effect)
+    {
+        yield return new WaitForSeconds(effect.effectDelay);
+        SpawnProjectile(effect);
+    }
+
+    IEnumerator WaitForMeleeDelay(MeleeEffect effect)
+    {
+        yield return new WaitForSeconds(effect.effectDelay);
+        SpawnMeleeHitBox(effect);
+    }
+
+    IEnumerator WaitForMoveDelay(MoveEffect effect)
+    {
+        yield return new WaitForSeconds(effect.effectDelay);
+        MoveRB(effect);
     }
 
     IEnumerator ProjectileEffectCoolDownTime(KeyType type, int keyEffect, int projectileEffect)
@@ -381,12 +438,29 @@ public class MechPartController : MonoBehaviour
         }     
     }
 
-    //IEnumerator MeleeEffectCoolDownTime(MeleeEffect effect)
-    //{
-    //    effect.onCoolDown = true;
-    //    yield return new WaitForSeconds(effect.coolDown);
-    //    effect.onCoolDown = false;
-    //}
+    IEnumerator MeleeEffectCoolDownTime(KeyType type, int keyEffect, int meleeEffect)
+    {
+        switch (type)
+        {
+            case KeyType.KeyDown:
+                keyDownEffects[keyEffect].meleeEffects[meleeEffect].onCoolDown = true;
+                yield return new WaitForSeconds(keyDownEffects[keyEffect].meleeEffects[meleeEffect].coolDown);
+                keyDownEffects[keyEffect].meleeEffects[meleeEffect].onCoolDown = false;
+                break;
+
+            case KeyType.KeyUp:
+                keyUpEffects[keyEffect].meleeEffects[meleeEffect].onCoolDown = true;
+                yield return new WaitForSeconds(keyUpEffects[keyEffect].meleeEffects[meleeEffect].coolDown);
+                keyUpEffects[keyEffect].meleeEffects[meleeEffect].onCoolDown = false;
+                break;
+
+            case KeyType.KeyHold:
+                keyHoldEffects[keyEffect].meleeEffects[meleeEffect].onCoolDown = true;
+                yield return new WaitForSeconds(keyHoldEffects[keyEffect].meleeEffects[meleeEffect].coolDown);
+                keyHoldEffects[keyEffect].meleeEffects[meleeEffect].onCoolDown = false;
+                break;
+        }
+    }
 
     IEnumerator MoveEffectCoolDownTime(KeyType type, int keyEffect, int moveEffect)
     {
