@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\benmo\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\benmo\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_MechPilot.-674822126.00" t="ExcludeRecursive" />
+    <e p="D:\PersonalProjects\MechPilot" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="DeveloperFolders" t="Include">
+          <e p="Ben" t="Include">
+            <e p="PlayerController.cs" t="Include" />
+          </e>
+          <e p="Harrison" t="Include">
+            <e p="Placeholder.txt" t="Include" />
+          </e>
+          <e p="Skyler" t="Include">
+            <e p="MechPartController.cs" t="Include" />
+            <e p="MechPartsManager.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Components" t="Include">
+            <e p="Common" t="Include">
+              <e p="Health.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Extensions" t="Include">
+            <e p="Vector2Extensions.cs" t="Include" />
+            <e p="Vector3Extensions.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="MechPilot.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

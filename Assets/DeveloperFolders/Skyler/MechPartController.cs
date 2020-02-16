@@ -91,7 +91,8 @@ public struct KeyHoldEffects
 public class MechPartController : MonoBehaviour
 {
     public bool debug = false;
-    public bool active = false;
+    [SerializeField]
+    private bool active = false;
     public bool rotatePartToCursor = true;
     public Vector2 partOffset;
     public float partStartRotation = 0f;
@@ -105,6 +106,16 @@ public class MechPartController : MonoBehaviour
 
     private enum KeyType { KeyDown, KeyUp, KeyHold }
 
+    public void ToggleActivation()
+    {
+        active = !active;
+    }
+
+    public bool IsActive()
+    {
+        return active;
+    }
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -113,7 +124,16 @@ public class MechPartController : MonoBehaviour
     private void Update()
     {
         if (!active)
+        {
+            // HACK: Stop moving animation
+            if (anim && !moving)
+            {
+                anim.SetBool("moving", false);
+            }
+            moving = false;
+
             return;
+        }
 
         // Rotate to part to aim at cursor
         if (rotatePartToCursor)
