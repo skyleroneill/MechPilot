@@ -14,11 +14,12 @@
             <e p="Placeholder.txt" t="Include" />
           </e>
           <e p="Skyler" t="Include">
+            <e p="HitBox.cs" t="Include" />
             <e p="MechPartController.cs" t="Include" />
-            <e p="MechPartsManager.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
           </e>
         </e>
+        <e p="MechPartConsole.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="Common" t="Include">
