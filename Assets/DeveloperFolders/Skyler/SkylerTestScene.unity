@@ -473,10 +473,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  active: 0
+  active: 1
   rotatePartToCursor: 0
-  partOffset: {x: 0, y: 0}
-  partStartRotation: 0
+  partRotationConstraints: {x: -360, y: 360}
   keyDownEffects:
   - downKey: 32
     projectileEffects: []
@@ -488,8 +487,8 @@ MonoBehaviour:
       coolDown: 0.03
       speed: 10
       effectDelay: 0
-      rotateAim: 0
       mustBeGrounded: 1
+      faceMoveDirection: 0
       groundCheckParams:
         origin: {fileID: 1597516916}
         size: {x: 4, y: 0.1}
@@ -512,8 +511,8 @@ MonoBehaviour:
       coolDown: 0
       speed: 10
       effectDelay: 0
-      rotateAim: 0
       mustBeGrounded: 0
+      faceMoveDirection: 1
       groundCheckParams:
         origin: {fileID: 0}
         size: {x: 0, y: 0}
@@ -534,8 +533,8 @@ MonoBehaviour:
       coolDown: 0
       speed: 10
       effectDelay: 0
-      rotateAim: 0
       mustBeGrounded: 0
+      faceMoveDirection: 1
       groundCheckParams:
         origin: {fileID: 0}
         size: {x: 0, y: 0}
@@ -1630,8 +1629,7 @@ MonoBehaviour:
   debug: 0
   active: 0
   rotatePartToCursor: 1
-  partOffset: {x: 0, y: 0}
-  partStartRotation: 0
+  partRotationConstraints: {x: -45, y: 45}
   keyDownEffects:
   - downKey: 323
     projectileEffects:
@@ -1644,7 +1642,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1655,7 +1652,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1666,7 +1662,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 17
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1677,7 +1672,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -60
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1688,7 +1682,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -5
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1699,7 +1692,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 72
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1710,7 +1702,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 28
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1721,7 +1712,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -70
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1732,7 +1722,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -30
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -1743,7 +1732,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 88
       effectDelay: 1
-      rotateAim: 1
       onCoolDown: 0
     meleeEffects: []
     moveEffects: []
@@ -1967,8 +1955,7 @@ MonoBehaviour:
   debug: 0
   active: 0
   rotatePartToCursor: 1
-  partOffset: {x: 0, y: 0}
-  partStartRotation: 0
+  partRotationConstraints: {x: -100, y: 100}
   keyDownEffects:
   - downKey: 323
     projectileEffects: []
@@ -2465,8 +2452,7 @@ MonoBehaviour:
   debug: 0
   active: 0
   rotatePartToCursor: 1
-  partOffset: {x: 0, y: 0}
-  partStartRotation: 0
+  partRotationConstraints: {x: -100, y: 100}
   keyDownEffects:
   - downKey: 323
     projectileEffects:
@@ -2479,7 +2465,6 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 0
-      rotateAim: 0
       onCoolDown: 0
     meleeEffects: []
     moveEffects: []
