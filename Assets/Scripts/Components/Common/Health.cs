@@ -127,7 +127,7 @@ public class Health : MonoBehaviour
         return maxHitPoints;
     }
 
-    public void resetHealth(int percent)
+    public void SetHealthPercentage(int percent)
     {
         //between 0 and 100%
         if (percent > 100)

@@ -13,7 +13,6 @@ public struct ProjectileEffect
     public float lifeTime;
     public float angleOffset;
     public float effectDelay;
-    public bool rotateAim;
     // TODO: Ignore layers
     [HideInInspector]
     public bool onCoolDown;
@@ -43,8 +42,8 @@ public struct MoveEffect
     public float coolDown;
     public float speed;
     public float effectDelay;
-    public bool rotateAim;
     public bool mustBeGrounded;
+    public bool faceMoveDirection;
     public BoxCastParameters groundCheckParams;
     [HideInInspector]
     public bool onCoolDown;
@@ -94,13 +93,13 @@ public class MechPartController : MonoBehaviour
     [SerializeField]
     private bool active = false;
     public bool rotatePartToCursor = true;
-    public Vector2 partOffset;
-    public float partStartRotation = 0f;
+    public Vector2 partRotationConstraints;
     public KeyDownEffects[] keyDownEffects;
     public KeyUpEffects[] keyUpEffects;
     public KeyHoldEffects[] keyHoldEffects;
 
     private bool moving = false;
+    private bool facingRight = true;
     private Animator anim;
 
 
@@ -119,6 +118,7 @@ public class MechPartController : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        facingRight = transform.root.localScale.x >= 0;
     }
 
     private void Update()
@@ -135,12 +135,12 @@ public class MechPartController : MonoBehaviour
             return;
         }
 
+        facingRight = transform.root.localScale.x >= 0;
+
         // Rotate to part to aim at cursor
         if (rotatePartToCursor)
         {
-            Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            diff.Normalize();
-            transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
+            RotateTransformToCursor(transform);
         }
 
         KeyDown();
@@ -275,13 +275,7 @@ public class MechPartController : MonoBehaviour
 
     private void SpawnProjectile(ProjectileEffect effect)
     {
-        // Rotate to aim at cursor
-        if (effect.rotateAim)
-        {
-            Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - effect.firePoint.position;
-            diff.Normalize();
-            effect.firePoint.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
-        }
+        effect.firePoint.localRotation = Quaternion.Euler(0f, 0f, facingRight ? 0f : 180f);
 
         Projectile newProjectile = Instantiate(effect.projectile,
                                                effect.firePoint.position,
@@ -392,6 +386,11 @@ public class MechPartController : MonoBehaviour
     {
         moving = true;
 
+        if (effect.faceMoveDirection)
+        {
+            transform.root.localScale =  new Vector3(effect.moveDirection.normalized.x, transform.root.localScale.y, transform.root.localScale.z);
+        }
+
         // Set velocity move event
         if (effect.moveType == MoveEffect.MoveType.Velocity)
         {
@@ -415,6 +414,18 @@ public class MechPartController : MonoBehaviour
     {
         return Physics2D.BoxCast(castParams.origin.position, castParams.size, castParams.angle,
                                  castParams.direction, castParams.distance, castParams.layerMask.value);
+    }
+
+    private void RotateTransformToCursor(Transform trans)
+    {
+        Vector3 diff = facingRight ?
+                       Camera.main.ScreenToWorldPoint(Input.mousePosition) - trans.position :
+                       trans.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        diff.Normalize();
+        float zRotation = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        zRotation = Mathf.Clamp(zRotation , partRotationConstraints.x, partRotationConstraints.y);
+        trans.rotation = Quaternion.Euler(0f, 0f, zRotation);
     }
 
     IEnumerator WaitForProjectileDelay(ProjectileEffect effect)
