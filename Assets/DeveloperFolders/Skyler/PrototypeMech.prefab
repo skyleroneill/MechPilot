@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &12653418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12653419}
+  m_Layer: 8
+  m_Name: b_fist_firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12653419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12653418}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1930001, y: 0.011000037, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2108645126738446613}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2108645127616032456
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,16 +597,16 @@ PrefabInstance:
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].firePoint
       value: 
-      objectReference: {fileID: 2108645127791707157}
+      objectReference: {fileID: 12653419}
     - target: {fileID: 3774463957355459086, guid: 65b123f07e2bc8647a9b8678f42a6393,
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].power
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3774463957355459086, guid: 65b123f07e2bc8647a9b8678f42a6393,
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].coolDown
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3774463957355459086, guid: 65b123f07e2bc8647a9b8678f42a6393,
         type: 3}
@@ -587,6 +617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].lifeTime
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774463957355459086, guid: 65b123f07e2bc8647a9b8678f42a6393,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].effectDelay
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3774463957355459087, guid: 65b123f07e2bc8647a9b8678f42a6393,
         type: 3}
@@ -626,9 +661,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2964212338380769519}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2108645127791707157 stripped
+--- !u!4 &2108645126738446613 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3774463958827011322, guid: 65b123f07e2bc8647a9b8678f42a6393,
+  m_CorrespondingSourceObject: {fileID: 3774463957639528954, guid: 65b123f07e2bc8647a9b8678f42a6393,
     type: 3}
   m_PrefabInstance: {fileID: 2964212338380769519}
   m_PrefabAsset: {fileID: 0}
@@ -707,7 +742,7 @@ PrefabInstance:
     - target: {fileID: 6181533306493378102, guid: e42228cc8112b1247a966a2cd97e16fd,
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].meleeEffects.Array.data[0].coolDown
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6181533306493378102, guid: e42228cc8112b1247a966a2cd97e16fd,
         type: 3}
@@ -717,7 +752,7 @@ PrefabInstance:
     - target: {fileID: 6181533306493378102, guid: e42228cc8112b1247a966a2cd97e16fd,
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].meleeEffects.Array.data[0].effectDelay
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6181533306493378102, guid: e42228cc8112b1247a966a2cd97e16fd,
         type: 3}
