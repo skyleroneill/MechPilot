@@ -1,0 +1,424 @@
+fileFormatVersion: 2
+guid: fc19ccda0bbf3ab4485c47fb5f54c90f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2414345203902436301
+    second: visor
+  - first:
+      213: 4794480759411152975
+    second: head
+  - first:
+      213: -3375656346980136768
+    second: b_shoulder
+  - first:
+      213: -7962589058062915298
+    second: b_arm
+  - first:
+      213: -8866420073271843586
+    second: b_fist
+  - first:
+      213: -4506253555284392213
+    second: torso
+  - first:
+      213: 4629831211565693038
+    second: f_shoulder
+  - first:
+      213: -7858240785963831611
+    second: f_arm
+  - first:
+      213: 6242498188419137362
+    second: f_fist
+  - first:
+      213: 994984017896945409
+    second: Robot Sprite out_9
+  - first:
+      213: 87631178304127571
+    second: Robot Sprite out_10
+  - first:
+      213: 4750347242738049779
+    second: b_foot
+  - first:
+      213: -1247445019738334899
+    second: f_foot
+  - first:
+      213: -6817790477904522575
+    second: Robot Sprite out_13
+  - first:
+      213: -6388573072816211868
+    second: b_leg
+  - first:
+      213: 7347702828712159793
+    second: f_leg
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: visor
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 240
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0.4065895, y: 0.4439532}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3d5c3db2a718120800000000000000
+      internalID: 2414345203902436301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 232
+        width: 27
+        height: 23
+      alignment: 9
+      pivot: {x: 0.40866485, y: 0.2563198}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48952339da698240800000000000000
+      internalID: 4794480759411152975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_shoulder
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 145
+        width: 25
+        height: 48
+      alignment: 9
+      pivot: {x: 0.50896716, y: 0.77088994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8c47aff624721d0800000000000000
+      internalID: -3375656346980136768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_arm
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 146
+        width: 50
+        height: 22
+      alignment: 9
+      pivot: {x: 0.12785248, y: 0.4999986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e196fb570733f7190800000000000000
+      internalID: -7962589058062915298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_fist
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 150
+        width: 15
+        height: 17
+      alignment: 9
+      pivot: {x: 0.11141154, y: 0.43406138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef42d3f6be524f480800000000000000
+      internalID: -8866420073271843586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torso
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 148
+        width: 59
+        height: 81
+      alignment: 9
+      pivot: {x: 0.56079566, y: 0.03225557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6ce6144429671c0800000000000000
+      internalID: -4506253555284392213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f_shoulder
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 145
+        width: 25
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4910321, y: 0.8175955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68b36ff4f6704040800000000000000
+      internalID: 4629831211565693038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f_arm
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 145
+        width: 50
+        height: 22
+      alignment: 9
+      pivot: {x: 0.100949705, y: 0.47961843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cea321d3abe1f290800000000000000
+      internalID: -7858240785963831611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f_fist
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 150
+        width: 16
+        height: 17
+      alignment: 9
+      pivot: {x: 0.19174385, y: 0.4076879}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ffdb7370fc1a650800000000000000
+      internalID: 6242498188419137362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_foot
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 16
+        width: 39
+        height: 78
+      alignment: 9
+      pivot: {x: 0.32243013, y: 0.88245755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2682b16af9ce140800000000000000
+      internalID: 4750347242738049779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f_foot
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 16
+        width: 39
+        height: 78
+      alignment: 9
+      pivot: {x: 0.32242996, y: 0.8961168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d499aa12d5f20bee0800000000000000
+      internalID: -1247445019738334899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_leg
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 16
+        width: 19
+        height: 67
+      alignment: 9
+      pivot: {x: 0.4859812, y: 0.87369126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468f92d63aa3757a0800000000000000
+      internalID: -6388573072816211868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f_leg
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 16
+        width: 19
+        height: 67
+      alignment: 9
+      pivot: {x: 0.47196198, y: 0.87766665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a658cfac848f560800000000000000
+      internalID: 7347702828712159793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
