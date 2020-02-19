@@ -50,9 +50,11 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space) && Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space)) && isGrounded)
         {
             hit2d = Physics2D.CircleCast(feetPosition.position, 0.5f, Vector2.down, 0f, groundLayer);
-
-            if (hit2d.collider.gameObject.layer == groundLayer)
+            print($"Object's name: {hit2d.collider.name}");
+            
+            if (hit2d.collider.gameObject.layer != null)
             {
+                print("Made it to jump");
                 StartCoroutine(TemporaryTrigger(hit2d));
             }
         }
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator TemporaryTrigger(RaycastHit2D hit)
     {
+        print("entered coroutine");
         hit.collider.isTrigger = true;
         
         rb2d.AddForce(new Vector2(0f, -jumpPower), ForceMode2D.Impulse);
