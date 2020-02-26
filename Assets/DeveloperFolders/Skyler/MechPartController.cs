@@ -14,6 +14,7 @@ public struct ProjectileEffect
     public float angleOffset;
     public float effectDelay;
     // TODO: Ignore layers
+    public AnimationParameter[] animationParameters;
     [HideInInspector]
     public bool onCoolDown;
 }
@@ -28,6 +29,7 @@ public struct MeleeEffect
     public float lifeTime;
     public float effectDelay;
     public bool hitBoxAsChild;
+    public AnimationParameter[] animationParameters;
     [HideInInspector]
     public bool onCoolDown;
 }
@@ -44,9 +46,16 @@ public struct MoveEffect
     public float effectDelay;
     public bool mustBeGrounded;
     public bool faceMoveDirection;
+    public AnimationParameter[] animationParameters;
     public BoxCastParameters groundCheckParams;
     [HideInInspector]
     public bool onCoolDown;
+}
+
+[System.Serializable]
+public struct AnimationEffect
+{
+    public AnimationParameter animationParameter;
 }
 
 [System.Serializable]
@@ -61,12 +70,25 @@ public struct BoxCastParameters
 }
 
 [System.Serializable]
+public struct AnimationParameter
+{
+    public enum ParameterType {Trigger, Bool, Float, Int};
+    public ParameterType parameterType;
+    public string parameterName;
+    public bool boolValue;
+    public float floatValue;
+    public int intValue;
+    public float delay;
+}
+
+[System.Serializable]
 public struct KeyDownEffects
 {
     public KeyCode downKey;
     public ProjectileEffect[] projectileEffects;
     public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
+    public AnimationEffect[] animationEffects;
 }
 
 [System.Serializable]
@@ -76,6 +98,7 @@ public struct KeyUpEffects
     public ProjectileEffect[] projectileEffects;
     public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
+    public AnimationEffect[] animationEffects;
 }
 
 [System.Serializable]
@@ -85,6 +108,7 @@ public struct KeyHoldEffects
     public ProjectileEffect[] projectileEffects;
     public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
+    public AnimationEffect[] animationEffects;
 }
 
 public class MechPartController : MonoBehaviour
@@ -125,13 +149,6 @@ public class MechPartController : MonoBehaviour
     {
         if (!active)
         {
-            // HACK: Stop moving animation
-            if (anim && !moving)
-            {
-                anim.SetBool("moving", false);
-            }
-            moving = false;
-
             return;
         }
 
@@ -146,13 +163,6 @@ public class MechPartController : MonoBehaviour
         KeyDown();
         KeyUp();
         KeyHold();
-
-        // HACK: Stop moving animation
-        if (anim && !moving)
-        {
-            anim.SetBool("moving", false);
-        }
-        moving = false;
     }
 
     private void KeyDown()
@@ -180,6 +190,12 @@ public class MechPartController : MonoBehaviour
                 for (j = 0; j < keyDownEffects[i].moveEffects.Length; j++)
                 {
                     PerformMoveEffect(keyDownEffects[i].moveEffects[j], KeyType.KeyDown, i, j);
+                }
+
+                // Animation effects
+                for (j = 0; j < keyDownEffects[i].animationEffects.Length; j++)
+                {
+                    StartCoroutine(PlayAnimation(keyDownEffects[i].animationEffects[j].animationParameter));
                 }
             }
         }
@@ -212,6 +228,12 @@ public class MechPartController : MonoBehaviour
                 {
                     PerformMoveEffect(keyUpEffects[i].moveEffects[j], KeyType.KeyUp, i, j);
                 }
+
+                // Animation effects
+                for (j = 0; j < keyUpEffects[i].animationEffects.Length; j++)
+                {
+                    StartCoroutine(PlayAnimation(keyUpEffects[i].animationEffects[j].animationParameter));
+                }
             }
         }
     }
@@ -243,6 +265,12 @@ public class MechPartController : MonoBehaviour
                 {
                     PerformMoveEffect(keyHoldEffects[i].moveEffects[j], KeyType.KeyHold, i, j);
                 }
+
+                // Animation effects
+                for (j = 0; j < keyHoldEffects[i].animationEffects.Length; j++)
+                {
+                    StartCoroutine(PlayAnimation(keyHoldEffects[i].animationEffects[j].animationParameter));
+                }
             }
         }
     }
@@ -260,7 +288,10 @@ public class MechPartController : MonoBehaviour
         // Play fire animation
         if (anim)
         {
-            anim.SetTrigger("fire");
+            for(int i = 0; i < effect.animationParameters.Length; i++)
+            {
+                StartCoroutine(PlayAnimation(effect.animationParameters[i]));
+            }
         }
 
         // Delay effect for specified amount of time
@@ -306,9 +337,9 @@ public class MechPartController : MonoBehaviour
             StartCoroutine(MeleeEffectCoolDownTime(type, keyEffect, meleeEffect));
 
         // Play fire animation
-        if (anim)
+        for (int i = 0; i < effect.animationParameters.Length; i++)
         {
-            anim.SetTrigger("fire");
+            StartCoroutine(PlayAnimation(effect.animationParameters[i]));
         }
 
         // Delay effect for specified amount of time
@@ -367,9 +398,9 @@ public class MechPartController : MonoBehaviour
             StartCoroutine(MoveEffectCoolDownTime(type, keyEffect, moveEffect));
 
         // Play moving animation
-        if (anim)
+        for (int i = 0; i < effect.animationParameters.Length; i++)
         {
-            anim.SetBool("moving", true);
+            StartCoroutine(PlayAnimation(effect.animationParameters[i]));
         }
 
         // Delay effect for specified amount of time
@@ -444,6 +475,27 @@ public class MechPartController : MonoBehaviour
     {
         yield return new WaitForSeconds(effect.effectDelay);
         MoveRB(effect);
+    }
+
+    IEnumerator PlayAnimation(AnimationParameter param)
+    {
+        yield return new WaitForSeconds(param.delay);
+        if(param.parameterType == AnimationParameter.ParameterType.Trigger)
+        {
+            anim.SetTrigger(param.parameterName);
+        }
+        else if (param.parameterType == AnimationParameter.ParameterType.Bool)
+        {
+            anim.SetBool(param.parameterName, param.boolValue);
+        }
+        else if (param.parameterType == AnimationParameter.ParameterType.Float)
+        {
+            anim.SetFloat(param.parameterName, param.floatValue);
+        }
+        else if (param.parameterType == AnimationParameter.ParameterType.Int)
+        {
+            anim.SetInteger(param.parameterName, param.intValue);
+        }
     }
 
     IEnumerator ProjectileEffectCoolDownTime(KeyType type, int keyEffect, int projectileEffect)
