@@ -16,7 +16,11 @@ TagManager:
   - Player
   - Bullets
   - Jumpable
+<<<<<<< HEAD
   - AI
+=======
+  - Climbable
+>>>>>>> 2db92bb0ac205234ded8e861ab7e1d95eb56cb99
   - 
   - 
   - 

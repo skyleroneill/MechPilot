@@ -15,17 +15,19 @@
           </e>
           <e p="Skyler" t="Include">
             <e p="HitBox.cs" t="Include" />
+            <e p="MechPartConsole.cs" t="Include" />
             <e p="MechPartController.cs" t="Include" />
+            <e p="NPCDeath.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
           </e>
         </e>
-        <e p="MechPartConsole.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="Common" t="Include">
               <e p="Health.cs" t="Include" />
             </e>
           </e>
+          <e p="DestroyOnDeath.cs" t="Include" />
           <e p="Extensions" t="Include">
             <e p="Vector2Extensions.cs" t="Include" />
             <e p="Vector3Extensions.cs" t="Include" />

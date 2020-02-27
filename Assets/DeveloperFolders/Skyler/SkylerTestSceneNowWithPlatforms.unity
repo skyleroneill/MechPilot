@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 21063747}
   - component: {fileID: 21063749}
   - component: {fileID: 21063748}
+  - component: {fileID: 21063750}
   m_Layer: 10
   m_Name: TestGround (7)
   m_TagString: Untagged
@@ -257,7 +258,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -323,6 +324,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &21063750
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21063746}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &23281459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1106,7 @@ MonoBehaviour:
   debug: 0
   active: 0
   rotatePartToCursor: 1
-  partRotationConstraints: {x: -10, y: 10}
+  partRotationConstraints: {x: -25, y: 25}
   keyDownEffects: []
   keyUpEffects: []
   keyHoldEffects:
@@ -1096,14 +1116,16 @@ MonoBehaviour:
         type: 3}
       firePoint: {fileID: 1697995845}
       power: 1
-      coolDown: 0.15
+      coolDown: 0.2
       speed: 10
-      lifeTime: 10
+      lifeTime: 2.5
       angleOffset: 0
       effectDelay: 0
+      animationParameters: []
       onCoolDown: 0
     meleeEffects: []
     moveEffects: []
+    animationEffects: []
 --- !u!1 &139911741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,6 +2145,7 @@ MonoBehaviour:
       effectDelay: 0
       mustBeGrounded: 1
       faceMoveDirection: 0
+      animationParameters: []
       groundCheckParams:
         origin: {fileID: 1597516916}
         size: {x: 4, y: 0.1}
@@ -2133,6 +2156,7 @@ MonoBehaviour:
           serializedVersion: 2
           m_Bits: 1024
       onCoolDown: 0
+    animationEffects: []
   keyUpEffects: []
   keyHoldEffects:
   - holdKey: 100
@@ -2147,6 +2171,7 @@ MonoBehaviour:
       effectDelay: 0
       mustBeGrounded: 0
       faceMoveDirection: 1
+      animationParameters: []
       groundCheckParams:
         origin: {fileID: 0}
         size: {x: 0, y: 0}
@@ -2157,6 +2182,7 @@ MonoBehaviour:
           serializedVersion: 2
           m_Bits: 0
       onCoolDown: 0
+    animationEffects: []
   - holdKey: 97
     projectileEffects: []
     meleeEffects: []
@@ -2169,6 +2195,7 @@ MonoBehaviour:
       effectDelay: 0
       mustBeGrounded: 0
       faceMoveDirection: 1
+      animationParameters: []
       groundCheckParams:
         origin: {fileID: 0}
         size: {x: 0, y: 0}
@@ -2179,6 +2206,7 @@ MonoBehaviour:
           serializedVersion: 2
           m_Bits: 0
       onCoolDown: 0
+    animationEffects: []
 --- !u!212 &317064795
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4388,6 +4416,7 @@ GameObject:
   - component: {fileID: 573526742}
   - component: {fileID: 573526744}
   - component: {fileID: 573526743}
+  - component: {fileID: 573526745}
   m_Layer: 10
   m_Name: TestGround (10)
   m_TagString: Untagged
@@ -4420,7 +4449,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -4486,6 +4515,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &573526745
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573526741}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &575084837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,6 +5118,7 @@ GameObject:
   - component: {fileID: 610726047}
   - component: {fileID: 610726049}
   - component: {fileID: 610726048}
+  - component: {fileID: 610726050}
   m_Layer: 10
   m_Name: TestGround (12)
   m_TagString: Untagged
@@ -5102,7 +5151,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -5168,6 +5217,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &610726050
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610726046}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &616295896
 GameObject:
   m_ObjectHideFlags: 0
@@ -5545,6 +5613,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5555,6 +5624,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5565,6 +5635,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 17
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5575,6 +5646,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -60
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5585,6 +5657,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -5
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5595,6 +5668,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 72
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5605,6 +5679,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 28
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5615,6 +5690,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -70
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5625,6 +5701,7 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -30
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
         type: 3}
@@ -5635,9 +5712,11 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 88
       effectDelay: 1
+      animationParameters: []
       onCoolDown: 0
     meleeEffects: []
     moveEffects: []
+    animationEffects: []
   keyUpEffects: []
   keyHoldEffects: []
 --- !u!4 &655394442
@@ -5809,6 +5888,7 @@ GameObject:
   - component: {fileID: 660806669}
   - component: {fileID: 660806668}
   - component: {fileID: 660806667}
+  - component: {fileID: 660806670}
   m_Layer: 10
   m_Name: TestGround (1)
   m_TagString: Untagged
@@ -5827,7 +5907,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -5907,6 +5987,25 @@ Transform:
   m_Father: {fileID: 1622638398}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!251 &660806670
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660806666}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &666927550
 GameObject:
   m_ObjectHideFlags: 0
@@ -6248,8 +6347,10 @@ MonoBehaviour:
       lifeTime: 0.01
       effectDelay: 0
       hitBoxAsChild: 0
+      animationParameters: []
       onCoolDown: 0
     moveEffects: []
+    animationEffects: []
   keyUpEffects: []
   keyHoldEffects: []
 --- !u!212 &715559275
@@ -8973,9 +9074,11 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 0
+      animationParameters: []
       onCoolDown: 0
     meleeEffects: []
     moveEffects: []
+    animationEffects: []
   keyUpEffects: []
   keyHoldEffects: []
 --- !u!212 &954622483
@@ -10793,6 +10896,7 @@ GameObject:
   - component: {fileID: 1182716655}
   - component: {fileID: 1182716657}
   - component: {fileID: 1182716656}
+  - component: {fileID: 1182716658}
   m_Layer: 10
   m_Name: TestGround (8)
   m_TagString: Untagged
@@ -10825,7 +10929,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -10891,6 +10995,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1182716658
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182716654}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1200515118
 GameObject:
   m_ObjectHideFlags: 0
@@ -11400,7 +11523,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12728,6 +12851,7 @@ GameObject:
   - component: {fileID: 1513542291}
   - component: {fileID: 1513542293}
   - component: {fileID: 1513542292}
+  - component: {fileID: 1513542294}
   m_Layer: 10
   m_Name: TestGround (9)
   m_TagString: Untagged
@@ -12760,7 +12884,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -12826,6 +12950,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1513542294
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513542290}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1523688877
 GameObject:
   m_ObjectHideFlags: 0
@@ -15695,6 +15838,7 @@ GameObject:
   - component: {fileID: 1909464375}
   - component: {fileID: 1909464378}
   - component: {fileID: 1909464377}
+  - component: {fileID: 1909464379}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -15736,7 +15880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909464374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.73, y: 5.43, z: 121.5}
+  m_LocalPosition: {x: 4.06, y: 0.64, z: 121.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1375245304}
@@ -15781,6 +15925,41 @@ MonoBehaviour:
   maxHitPoints: 1
   currentHitPoints: 1
   iTime: 0.15
+--- !u!114 &1909464379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909464374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81a4671cc10a4544be855afe69d219e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  active: 0
+  rotatePartToCursor: 1
+  partRotationConstraints: {x: -10, y: 10}
+  keyDownEffects: []
+  keyUpEffects: []
+  keyHoldEffects:
+  - holdKey: 323
+    projectileEffects:
+    - projectile: {fileID: 3166870183736439081, guid: c800c4c0d0b864346ac312427a66cb1e,
+        type: 3}
+      firePoint: {fileID: 1697995845}
+      power: 1
+      coolDown: 0.15
+      speed: 10
+      lifeTime: 10
+      angleOffset: 0
+      effectDelay: 0
+      animationParameters: []
+      onCoolDown: 0
+    meleeEffects: []
+    moveEffects: []
+    animationEffects: []
 --- !u!1 &1915734034
 GameObject:
   m_ObjectHideFlags: 0
@@ -17455,6 +17634,7 @@ GameObject:
   - component: {fileID: 2143772796}
   - component: {fileID: 2143772798}
   - component: {fileID: 2143772797}
+  - component: {fileID: 2143772799}
   m_Layer: 10
   m_Name: TestGround (11)
   m_TagString: Untagged
@@ -17487,7 +17667,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -17553,6 +17733,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &2143772799
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143772795}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 160
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &2108645127940285640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17568,6 +17767,11 @@ PrefabInstance:
     - target: {fileID: 2108645127505555443, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127505555443, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].meleeEffects.Array.data[0].animationParameters.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2108645127505555443, guid: 29e00bc360776e341ab4eb4893f58111,
@@ -17605,6 +17809,21 @@ PrefabInstance:
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].effectDelay
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127505555443, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127505555443, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].meleeEffects.Array.data[0].animationParameters.Array.data[0].parameterName
+      value: fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127505555443, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].meleeEffects.Array.data[0].hitBoxAsChild
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2108645127616032456, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
@@ -17666,6 +17885,71 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2108645127616032459, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[1].moveEffects.Array.data[0].animationParameters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].moveEffects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].animationEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[1].animationEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].animationParameters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].animationParameters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
       propertyPath: keyHoldEffects.Array.data[0].moveEffects.Array.data[0].mustBeGrounded
@@ -17684,7 +17968,193 @@ PrefabInstance:
     - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
       propertyPath: active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: rotatePartToCursor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterName
+      value: moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.data[0].boolValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[1].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[1].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterName
+      value: moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[1].moveEffects.Array.data[0].animationParameters.Array.data[0].boolValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].upKey
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].moveEffects.Array.data[0].movingRB
+      value: 
+      objectReference: {fileID: 2108645127940285641}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].moveEffects.Array.data[0].moveType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterName
+      value: moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].animationEffects.Array.data[0].animationParameter.parameterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[0].animationEffects.Array.data[0].animationParameter.parameterName
+      value: moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[1].upKey
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[1].animationEffects.Array.data[0].animationParameter.parameterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyUpEffects.Array.data[1].animationEffects.Array.data[0].animationParameter.parameterName
+      value: moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].moveEffects.Array.data[0].speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].holdKey
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].movingRB
+      value: 
+      objectReference: {fileID: 2108645127940285641}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].moveDirection.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].faceMoveDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterName
+      value: moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].animationParameters.Array.data[0].boolValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[2].moveEffects.Array.data[0].groundCheckParams.origin
+      value: 
+      objectReference: {fileID: 373914402}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].holdKey
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].movingRB
+      value: 
+      objectReference: {fileID: 2108645127940285641}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].moveDirection.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].faceMoveDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterName
+      value: moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].animationParameters.Array.data[0].boolValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyHoldEffects.Array.data[3].moveEffects.Array.data[0].groundCheckParams.origin
+      value: 
+      objectReference: {fileID: 373914402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
+--- !u!50 &2108645127940285641 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2108645127616032459, guid: 29e00bc360776e341ab4eb4893f58111,
+    type: 3}
+  m_PrefabInstance: {fileID: 2108645127940285640}
+  m_PrefabAsset: {fileID: 0}
