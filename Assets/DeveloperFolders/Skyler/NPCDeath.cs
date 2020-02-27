@@ -7,7 +7,8 @@ public class NPCDeath : MonoBehaviour
     [SerializeField]
     private GameObject particles;
     [SerializeField]
-    private GameObject[] powerUps;
+    [Tooltip ("Spawns these on death")]
+    private GameObject[] deathSpawns;
     [SerializeField]
     [Range(0, 100)]
     private int powerUpDropChance = 10;
@@ -25,10 +26,10 @@ public class NPCDeath : MonoBehaviour
                 Instantiate(particles, transform.position, transform.rotation);
 
             // Spawn random power ups if random number is within specified percent
-            if(powerUps.Length > 1 && Random.Range(0, 101) <= powerUpDropChance){
-                Instantiate(powerUps[Random.Range(0, powerUps.Length)], transform.position, transform.rotation);
-            }else if(powerUps.Length == 1 && Random.Range(1, 101) <= powerUpDropChance)
-                Instantiate(powerUps[0], transform.position, transform.rotation);
+            if(deathSpawns.Length > 1 && Random.Range(0, 101) <= powerUpDropChance){
+                Instantiate(deathSpawns[Random.Range(0, deathSpawns.Length)], transform.position, transform.rotation);
+            }else if(deathSpawns.Length == 1 && Random.Range(1, 101) <= powerUpDropChance)
+                Instantiate(deathSpawns[0], transform.position, transform.rotation);
 
             Destroy(gameObject);
         }
