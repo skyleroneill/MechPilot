@@ -46,7 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 1
-  ignoreLayers: 08000000
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 256
   lifeTime: 0.1
 --- !u!61 &5574416549347861212
 BoxCollider2D:
