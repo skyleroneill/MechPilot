@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+#region Ability Effect Structs
 [System.Serializable]
 public struct ProjectileEffect
 {
     public GameObject projectile;
     public Transform firePoint;
     public int power;
+    public int energyUsage;
     public float coolDown;
     public float speed;
     public float lifeTime;
@@ -25,6 +27,7 @@ public struct MeleeEffect
     public GameObject hitBox;
     public Transform firePoint;
     public int power;
+    public int energyUsage;
     public float coolDown;
     public float lifeTime;
     public float effectDelay;
@@ -41,6 +44,7 @@ public struct MoveEffect
     public Rigidbody2D movingRB;
     public Vector2 moveDirection;
     public MoveType moveType;
+    public int energyUsage;
     public float coolDown;
     public float speed;
     public float effectDelay;
@@ -57,7 +61,9 @@ public struct AnimationEffect
 {
     public AnimationParameter animationParameter;
 }
+#endregion Ability Effect Structs
 
+#region Auxilary Structs
 [System.Serializable]
 public struct BoxCastParameters
 {
@@ -80,7 +86,9 @@ public struct AnimationParameter
     public int intValue;
     public float delay;
 }
+#endregion Auxilary Structs
 
+#region Key Input Structs
 [System.Serializable]
 public struct KeyDownEffects
 {
@@ -110,25 +118,31 @@ public struct KeyHoldEffects
     public MoveEffect[] moveEffects;
     public AnimationEffect[] animationEffects;
 }
+#endregion Key Input Structs
 
 public class MechPartController : MonoBehaviour
 {
+    #region Public Variables and Serialize Fields
     public bool debug = false;
     [SerializeField]
     private bool active = false;
+    public bool partUsesEnergy = false;
     public bool rotatePartToCursor = true;
     public Vector2 partRotationConstraints;
     public KeyDownEffects[] keyDownEffects;
     public KeyUpEffects[] keyUpEffects;
     public KeyHoldEffects[] keyHoldEffects;
+    #endregion Public Variables
 
-    private bool moving = false;
+    #region Private Variables
     private bool facingRight = true;
     private Animator anim;
-
+    private MechPartEnergy energy;
 
     private enum KeyType { KeyDown, KeyUp, KeyHold }
+    #endregion Private Variables
 
+    #region Public Functions
     public void ToggleActivation()
     {
         active = !active;
@@ -138,10 +152,14 @@ public class MechPartController : MonoBehaviour
     {
         return active;
     }
+    #endregion Public Functions
 
+    #region Unity Functions
     private void Start()
     {
         anim = GetComponent<Animator>();
+        energy = GetComponent<MechPartEnergy>();
+        if (!energy) partUsesEnergy = false;
         facingRight = transform.root.localScale.x >= 0;
     }
 
@@ -164,7 +182,9 @@ public class MechPartController : MonoBehaviour
         KeyUp();
         KeyHold();
     }
+    #endregion Unity Functions
 
+    #region Key Input Region
     private void KeyDown()
     {
         int i;
@@ -274,11 +294,17 @@ public class MechPartController : MonoBehaviour
             }
         }
     }
+    #endregion Key Input Region
 
+    #region Perform Effects Region
     private void PerformProjectileEffect(ProjectileEffect effect, KeyType type, int keyEffect, int projectileEffect)
     {
         // Don't do anything if on cool down
         if (effect.onCoolDown)
+            return;
+
+        // Use up energy if we can
+        if (partUsesEnergy && !energy.UseEnergy(effect.energyUsage))
             return;
 
         // Perform cool down
@@ -331,6 +357,10 @@ public class MechPartController : MonoBehaviour
         // Don't do anything if on cool down
         if (effect.onCoolDown)
             return;
+
+        // Use energy
+        if (partUsesEnergy)
+            energy.UseEnergy(effect.energyUsage);
 
         // Perform cool down
         if (effect.coolDown > 0f && !effect.onCoolDown)
@@ -393,6 +423,10 @@ public class MechPartController : MonoBehaviour
                 return;
         }
 
+        // Use energy
+        if (partUsesEnergy)
+            energy.UseEnergy(effect.energyUsage);
+
         // Perform cool down
         if (effect.coolDown > 0f && !effect.onCoolDown)
             StartCoroutine(MoveEffectCoolDownTime(type, keyEffect, moveEffect));
@@ -415,8 +449,6 @@ public class MechPartController : MonoBehaviour
 
     private void MoveRB(MoveEffect effect)
     {
-        moving = true;
-
         if (effect.faceMoveDirection)
         {
             transform.root.localScale =  new Vector3(effect.moveDirection.normalized.x, transform.root.localScale.y, transform.root.localScale.z);
@@ -440,7 +472,9 @@ public class MechPartController : MonoBehaviour
                                                                ForceMode2D.Impulse);
         }
     }
+    #endregion Perform Effects Region
 
+    #region Auxilary Functions Region
     private RaycastHit2D CheckOnGround(BoxCastParameters castParams)
     {
         return Physics2D.BoxCast(castParams.origin.position, castParams.size, castParams.angle,
@@ -458,7 +492,9 @@ public class MechPartController : MonoBehaviour
         zRotation = Mathf.Clamp(zRotation , partRotationConstraints.x, partRotationConstraints.y);
         trans.rotation = Quaternion.Euler(0f, 0f, zRotation);
     }
+    #endregion Auxilary Function Region
 
+    #region Coroutines
     IEnumerator WaitForProjectileDelay(ProjectileEffect effect)
     {
         yield return new WaitForSeconds(effect.effectDelay);
@@ -568,4 +604,5 @@ public class MechPartController : MonoBehaviour
                 break;
         }
     }
+    #endregion Coroutines
 }
