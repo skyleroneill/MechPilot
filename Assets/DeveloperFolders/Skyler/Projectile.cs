@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     protected int power = 1;
     [Tooltip("The layers that this projectile will ignore.")]
     [SerializeField]
-    protected List<int> ignoreLayers;
+    protected LayerMask ignoreLayers;
     [SerializeField]
     protected float lifeTime = 5f;
     [Tooltip("Should this projectile move forward automatically. Or should it wait for a direction to be given.")]
@@ -23,6 +23,7 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     protected bool destroyOnHit = true;
 
+    protected List<int> ignoreLayerNumbers;
     protected Vector2 dir;
     protected Rigidbody2D rb;
     protected GameObject shooter;
@@ -31,7 +32,19 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifeTime);
-        //if (moveForward) dir = transform.right;
+        ignoreLayerNumbers = new List<int>();
+        SetLayerNumbers();
+    }
+
+    private void SetLayerNumbers()
+    {
+        for (int i = 0; i < 32; i++)
+        {
+            if(ignoreLayers == (ignoreLayers | (1 << i)))
+            {
+                ignoreLayerNumbers.Add(i);
+            }
+        }
     }
 
     private void Update()
@@ -58,7 +71,7 @@ public class Projectile : MonoBehaviour
         if (shooter == hit) return;
 
         // Don't collide with objects on an ignoreLayer
-        foreach (int layer in ignoreLayers)
+        foreach (int layer in ignoreLayerNumbers)
         {
             if (hit.layer == layer) return;
         }
@@ -109,11 +122,6 @@ public class Projectile : MonoBehaviour
     public void SetShooter(GameObject s)
     {
         shooter = s;
-    }
-
-    public void AddIgnoreLayer(int layer)
-    {
-        ignoreLayers.Add(layer);
     }
 
     public void SetLifeTime(float time)

@@ -20,7 +20,14 @@
             <e p="NPCDeath.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
           </e>
+          <e p="Zach" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="FlyingAI.cs" t="Include" />
+              <e p="LandAI.cs" t="Include" />
+            </e>
+          </e>
         </e>
+        <e p="MechPartEnergy.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="Common" t="Include">

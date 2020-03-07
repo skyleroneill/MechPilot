@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: 96901179a5f7be8439fe6af80b1fa59f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9010863480960174078
+    second: Pilot_Sprites_0
+  - first:
+      213: 5948719975089325517
+    second: Pilot_Sprites_1
+  - first:
+      213: -7736587811903330223
+    second: Pilot_Idle_1
+  - first:
+      213: -5198468341920815706
+    second: Pilot_Idle_2
+  - first:
+      213: -5707528742023259174
+    second: Pilot_Idle_3
+  - first:
+      213: 1039214733905286065
+    second: Pilot_Idle_4
+  - first:
+      213: 6742501966843140116
+    second: Pilot_Idle_5
+  - first:
+      213: 6190600189917788801
+    second: Pilot_Jump_1
+  - first:
+      213: 8665453970734478536
+    second: Pilot_Jump_2
+  - first:
+      213: 7881829522563334543
+    second: Pilot_Jump_3
+  - first:
+      213: 5081359888188320074
+    second: Pilot_Jump_4
+  - first:
+      213: 6953994913771680976
+    second: Pilot_Fall_1
+  - first:
+      213: 6172967681184404934
+    second: Pilot_Fall_2
+  - first:
+      213: -7788734987851748707
+    second: Pilot_Fall_3
+  - first:
+      213: -5600049214533898017
+    second: Pilot_Walk_1
+  - first:
+      213: -6107148516314497821
+    second: Pilot_Walk_2
+  - first:
+      213: 5074298041872333673
+    second: Pilot_Walk_3
+  - first:
+      213: -7961493884849857428
+    second: Pilot_Walk_4
+  - first:
+      213: 8590880868723798921
+    second: Pilot_Walk_5
+  - first:
+      213: -7863984838780136053
+    second: Pilot_Walk_6
+  - first:
+      213: -7939992118013870603
+    second: Pilot_Walk_7
+  - first:
+      213: -3172581209028776535
+    second: Pilot_Walk_8
+  - first:
+      213: 262264323044382687
+    second: Scarf
+  - first:
+      213: -3174335834661680583
+    second: Pilot_Run_1
+  - first:
+      213: 925127186614488574
+    second: Pilot_Run_2
+  - first:
+      213: 6172071903813279828
+    second: Pilot_Run_3
+  - first:
+      213: 6371351178542537514
+    second: Pilot_Run_4
+  - first:
+      213: 2611819157469975295
+    second: Pilot_Run_5
+  - first:
+      213: 6507100969304278678
+    second: Pilot_Run_6
+  - first:
+      213: -6169571985995570988
+    second: Pilot_Run_7
+  - first:
+      213: 6579565082960230426
+    second: Pilot_Run_8
+  - first:
+      213: 7578429063154861558
+    second: Pilot_Run_9
+  - first:
+      213: -84166006920738439
+    second: Pilot_Run_10
+  - first:
+      213: -1549882653887712521
+    second: Pilot_Run_11
+  - first:
+      213: 3885957627916602059
+    second: Pilot_Run_12
+  - first:
+      213: -6221194842272295239
+    second: Pilot_Sprites_35
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pilot_Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 62
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7cb2628940d0d70800000000000000
+      internalID: 9010863480960174078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 61
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc54877bc491e8250800000000000000
+      internalID: 5948719975089325517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 58
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158a2e1106e12a490800000000000000
+      internalID: -7736587811903330223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 58
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a522bfe5945bd7b0800000000000000
+      internalID: -5198468341920815706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 58
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb1f5259d8cac0b0800000000000000
+      internalID: -5707528742023259174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 58
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3d6c36b480c6e00800000000000000
+      internalID: 1039214733905286065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 58
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418de07c0dd229d50800000000000000
+      internalID: 6742501966843140116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 58
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18af382d21e69e550800000000000000
+      internalID: 6190600189917788801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 58
+        width: 15
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4702f8970e14870800000000000000
+      internalID: 8665453970734478536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 58
+        width: 15
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f810398e032e16d60800000000000000
+      internalID: 7881829522563334543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 59
+        width: 13
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49226765ed948640800000000000000
+      internalID: 5081359888188320074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Fall_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 58
+        width: 15
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4fb3db78d818060800000000000000
+      internalID: 6953994913771680976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Fall_2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 59
+        width: 13
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c596f67669caa550800000000000000
+      internalID: 6172967681184404934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Fall_3
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 58
+        width: 15
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9aa0778bcad8e390800000000000000
+      internalID: -7788734987851748707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 3
+        width: 13
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd07003e8e0a842b0800000000000000
+      internalID: -5600049214533898017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 3
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec358e08cc0f3ba0800000000000000
+      internalID: -6107148516314497821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 3
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bb24e2f278b6640800000000000000
+      internalID: 5074298041872333673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3
+        width: 21
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c54185e77138190800000000000000
+      internalID: -7961493884849857428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 3
+        width: 14
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9833bf732a0f83770800000000000000
+      internalID: 8590880868723798921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3
+        width: 13
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85d37d44738dd290800000000000000
+      internalID: -7863984838780136053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 3
+        width: 18
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdb16e8c3b7fc190800000000000000
+      internalID: -7939992118013870603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 3
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ada2ce033ab8f3d0800000000000000
+      internalID: -3172581209028776535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scarf
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 16
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd791542300c3a300800000000000000
+      internalID: 262264323044382687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 3
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a8231706e72f3d0800000000000000
+      internalID: -3174335834661680583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_2
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 3
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd86325646b6dc00800000000000000
+      internalID: 925127186614488574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 3
+        width: 18
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450a5fa02ba97a550800000000000000
+      internalID: 6172071903813279828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_4
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b5b48d3269b6850800000000000000
+      internalID: 6371351178542537514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_5
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 10
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2de8a8fab0f3420800000000000000
+      internalID: 2611819157469975295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_6
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 7
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6964bf00bdddd4a50800000000000000
+      internalID: 6507100969304278678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0688e67f6416aa0800000000000000
+      internalID: -6169571985995570988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_8
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 3
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18786a359f4f4b50800000000000000
+      internalID: 6579565082960230426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_9
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 3
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f587d8a41dfb2960800000000000000
+      internalID: 7578429063154861558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_10
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 3
+        width: 13
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979835f667bf4def0800000000000000
+      internalID: -84166006920738439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_11
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 7
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2bb7b10f5bd7ae0800000000000000
+      internalID: -1549882653887712521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pilot_Run_12
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 11
+        width: 17
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca4038bfd1bde530800000000000000
+      internalID: 3885957627916602059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

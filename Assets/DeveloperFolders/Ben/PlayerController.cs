@@ -13,8 +13,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private RaycastHit2D hit2d;
     private RaycastHit2D ladder;
+    private Animator anim;
 
     private bool isClimbing;
+    private bool isFacingRight = false;
     
     public Transform feetPosition;
     public LayerMask groundLayer;
@@ -23,27 +25,47 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         isClimbing = false;
     }
     
     private void Update()
     {
-        if (!isClimbing)
-        {
-            Jump();
-            JumpDown();
-        }
+        if (isClimbing) return;
+        
+        Jump();
+        JumpDown();
     }
     private void FixedUpdate()
     {
-        rb2d.velocity = new Vector2(Input.GetAxis("Horizontal") * movementSpeed, rb2d.velocity.y);
+        var horizontalMovement = Input.GetAxis("Horizontal"); 
+        rb2d.velocity = new Vector2(horizontalMovement * movementSpeed, rb2d.velocity.y);
+        
+/*
+        if (horizontalMovement < 0f || horizontalMovement > 0f)
+            anim.SetBool("isRunning", true);
+        else
+            anim.SetBool("isRunning", false);
+*/
+
+        // Kinda hacky, but looks WAY better in game
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            anim.SetBool("isRunning", true);
+        else
+            anim.SetBool("isRunning", false);
 
         if (isClimbing)
         {
             rb2d.velocity = new Vector2(Input.GetAxis("Horizontal") * movementSpeed,Input.GetAxis("Vertical") * movementSpeed);
         }
         
+        if (isFacingRight == false && horizontalMovement > 0)
+            Flip();
+        else if (isFacingRight == true && horizontalMovement < 0)
+            Flip();
+        
         isGrounded = Physics2D.OverlapCircle(feetPosition.position, 0.5f, groundLayer);
+        anim.SetBool("isGrounded", isGrounded);
     }
 
     private void Jump()
@@ -94,5 +116,13 @@ public class PlayerController : MonoBehaviour
             isClimbing = false;
 
         print("Bye bye ladder");
+    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        var scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
     }
 }

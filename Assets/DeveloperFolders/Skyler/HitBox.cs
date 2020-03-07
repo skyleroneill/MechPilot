@@ -9,16 +9,30 @@ public class HitBox : MonoBehaviour
     protected int power = 1;
     [Tooltip("The layers that this projectile will ignore.")]
     [SerializeField]
-    protected List<int> ignoreLayers;
+    protected LayerMask ignoreLayers;
     [SerializeField]
     protected float lifeTime = 5f;
 
+    protected List<int> ignoreLayerNumbers;
     protected Rigidbody2D rb;
     protected GameObject attacker;
 
     private void Start()
     {
         Destroy(gameObject, lifeTime);
+        ignoreLayerNumbers = new List<int>();
+        SetLayerNumbers();
+    }
+
+    private void SetLayerNumbers()
+    {
+        for (int i = 0; i < 32; i++)
+        {
+            if (ignoreLayers == (ignoreLayers | (1 << i)))
+            {
+                ignoreLayerNumbers.Add(i);
+            }
+        }
     }
 
     private void OnCollisionStay2D(Collision2D col)
@@ -37,7 +51,7 @@ public class HitBox : MonoBehaviour
         if (attacker == hit) return;
 
         // Don't collide with objects on an ignoreLayer
-        foreach (int layer in ignoreLayers)
+        foreach (int layer in ignoreLayerNumbers)
         {
             if (hit.layer == layer) return;
         }
@@ -57,11 +71,6 @@ public class HitBox : MonoBehaviour
     public void SetAttacker(GameObject s)
     {
         attacker = s;
-    }
-
-    public void AddIgnoreLayer(int layer)
-    {
-        ignoreLayers.Add(layer);
     }
 
     public void SetLifeTime(float time)
