@@ -32,12 +32,14 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifeTime);
-        ignoreLayerNumbers = new List<int>();
         SetLayerNumbers();
     }
 
     private void SetLayerNumbers()
     {
+
+        ignoreLayerNumbers = new List<int>();
+
         for (int i = 0; i < 32; i++)
         {
             if(ignoreLayers == (ignoreLayers | (1 << i)))
@@ -67,6 +69,12 @@ public class Projectile : MonoBehaviour
 
     private void HitBehaviour(GameObject hit)
     {
+        Health hitHealth = hit.GetComponent<Health>();
+
+        // Use parent object's health if the hit object doesn't have health
+        if (!hitHealth)
+            hitHealth = hit.GetComponentInParent<Health>();
+
         // Don't collide with the object that shot it
         if (shooter == hit) return;
 
@@ -77,7 +85,7 @@ public class Projectile : MonoBehaviour
         }
 
         // Destroy the projectile if it hit something without health
-        if(destroyOnHit && !hit.GetComponent<Health>())
+        if(destroyOnHit && !hitHealth)
         {
             Destroy(gameObject);
         }
@@ -85,10 +93,10 @@ public class Projectile : MonoBehaviour
         int damageDealt = 0;
 
         // Damage the collided object if it has health
-        if (hit.GetComponent<Health>())
+        if (hitHealth)
         {
             // If the damage dealt is greater than 0, destroy this projectile
-            damageDealt = hit.GetComponent<Health>().TakeDamageInvincibility(power);
+            damageDealt = hitHealth.TakeDamageInvincibility(power);
         }
 
         // If no damage was dealt then the don't do anything
@@ -127,5 +135,12 @@ public class Projectile : MonoBehaviour
     public void SetLifeTime(float time)
     {
         lifeTime = time;
+    }
+
+    public void SetIgnoreLayers(LayerMask mask)
+    {
+        //ignoreLayerNumbers.Clear();
+        ignoreLayers = mask;
+        SetLayerNumbers();
     }
 }

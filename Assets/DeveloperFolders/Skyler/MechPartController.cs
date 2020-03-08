@@ -15,7 +15,7 @@ public struct ProjectileEffect
     public float lifeTime;
     public float angleOffset;
     public float effectDelay;
-    // TODO: Ignore layers
+    public LayerMask ignoreLayers;
     public AnimationParameter[] animationParameters;
     [HideInInspector]
     public bool onCoolDown;
@@ -32,6 +32,7 @@ public struct MeleeEffect
     public float lifeTime;
     public float effectDelay;
     public bool hitBoxAsChild;
+    public LayerMask ignoreLayers;
     public AnimationParameter[] animationParameters;
     [HideInInspector]
     public bool onCoolDown;
@@ -349,7 +350,7 @@ public class MechPartController : MonoBehaviour
         newProjectile.SetSpeed(effect.speed);
         newProjectile.SetShooter(gameObject);
         newProjectile.SetLifeTime(effect.lifeTime);
-        // TODO: Add ignore layers
+        newProjectile.SetIgnoreLayers(effect.ignoreLayers);
     }
 
     private void PerformMeleeEffect(MeleeEffect effect, KeyType type, int keyEffect, int meleeEffect)
@@ -404,7 +405,7 @@ public class MechPartController : MonoBehaviour
         newHitBox.SetPower(effect.power);
         newHitBox.SetLifeTime(effect.lifeTime);
         newHitBox.SetAttacker(gameObject);
-        // TODO: Add ignore layers
+        newHitBox.SetIgnoreLayers(effect.ignoreLayers);
     }
 
     private void PerformMoveEffect(MoveEffect effect, KeyType type, int keyEffect, int moveEffect)
