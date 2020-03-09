@@ -729,10 +729,16 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0.03
       speed: 20
-      effectDelay: 0
+      effectDelay: 0.2
       mustBeGrounded: 1
       faceMoveDirection: 0
-      animationParameters: []
+      animationParameters:
+      - parameterType: 0
+        parameterName: jump
+        boolValue: 0
+        floatValue: 0
+        intValue: 0
+        delay: 0
       groundCheckParams:
         origin: {fileID: 2108645127616032457}
         size: {x: 1, y: 0.1}
