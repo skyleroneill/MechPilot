@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 0
+  partUsesEnergy: 0
   rotatePartToCursor: 1
   partRotationConstraints: {x: -100, y: 100}
   keyDownEffects:
@@ -76,12 +77,15 @@ MonoBehaviour:
         type: 3}
       firePoint: {fileID: 0}
       power: 1
+      energyUsage: 0
       coolDown: 1
       lifeTime: 1
       effectDelay: 1
       hitBoxAsChild: 1
+      animationParameters: []
       onCoolDown: 0
     moveEffects: []
+    animationEffects: []
   keyUpEffects: []
   keyHoldEffects: []
 --- !u!1 &3774463957639528955
@@ -243,7 +247,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1974179015
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: -3375656346980136768, guid: fc19ccda0bbf3ab4485c47fb5f54c90f,
     type: 3}
@@ -271,6 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  partUsesEnergy: 0
   rotatePartToCursor: 1
   partRotationConstraints: {x: -100, y: 100}
   keyDownEffects:
@@ -281,12 +286,15 @@ MonoBehaviour:
         type: 3}
       firePoint: {fileID: 0}
       power: 1
+      energyUsage: 0
       coolDown: 1
       lifeTime: 1
       effectDelay: 1
       hitBoxAsChild: 1
+      animationParameters: []
       onCoolDown: 0
     moveEffects: []
+    animationEffects: []
   keyUpEffects: []
   keyHoldEffects: []
 --- !u!1 &3774463958827011323
@@ -361,7 +369,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -8866420073271843586, guid: fc19ccda0bbf3ab4485c47fb5f54c90f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -440,6 +448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: b_shoulder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841217403234283154, guid: c21eafab43e9fe04db8187916ee3990a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7758705817099211414, guid: c21eafab43e9fe04db8187916ee3990a, type: 3}
