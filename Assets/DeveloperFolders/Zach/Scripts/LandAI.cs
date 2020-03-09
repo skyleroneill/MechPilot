@@ -26,6 +26,7 @@ public class LandAI : MonoBehaviour{
     bool air = false;
 
     float lookDir;
+
     
     private void Awake() {
        target = GameObject.Find("ProtoBot_Head").transform;
@@ -69,6 +70,7 @@ public class LandAI : MonoBehaviour{
         anim.SetTrigger("Jump");
         rb.velocity = new Vector2(x, 1) * attackForce;
         attackTimer = attackCooldown;
+        
 
 
 
