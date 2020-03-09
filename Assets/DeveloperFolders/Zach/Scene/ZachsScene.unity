@@ -1214,7 +1214,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.41}
+  m_Offset: {x: 0, y: 0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1225,7 +1225,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 0.4, y: 0.01}
   m_EdgeRadius: 0
 --- !u!4 &120216499
 Transform:
@@ -1235,7 +1235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120216495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.84, y: 5.817, z: 26.850777}
+  m_LocalPosition: {x: -3.81, y: -3.36, z: 26.850777}
   m_LocalScale: {x: 4.1678095, y: 4.1678095, z: 4.1678095}
   m_Children:
   - {fileID: 13819811}
@@ -1270,9 +1270,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 120216495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44ca8fee6cfcad41885d9b6828b9181, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f24933ef899285469b73bce3dd5f436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 0}
+  deathSpawns: []
+  powerUpDropChance: 10
 --- !u!1 &139911741
 GameObject:
   m_ObjectHideFlags: 0
@@ -17864,6 +17867,11 @@ PrefabInstance:
         type: 3}
       propertyPath: destroyOnHit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8953224264502346623, guid: 7e2489c9bae81524788ffb115a963373,
+        type: 3}
+      propertyPath: power
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e2489c9bae81524788ffb115a963373, type: 3}

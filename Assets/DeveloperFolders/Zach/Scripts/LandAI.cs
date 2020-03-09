@@ -51,6 +51,9 @@ public class LandAI : MonoBehaviour{
         else
             air = false;
         anim.SetBool("Air", air);
+        if(air)
+            anim.SetFloat("Speed", 0);
+
    }
    void Move(Vector2 dir){
        dir = new Vector2(dir.x, 0).normalized;
