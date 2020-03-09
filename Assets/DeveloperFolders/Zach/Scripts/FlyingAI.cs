@@ -59,7 +59,10 @@ public class FlyingAI : MonoBehaviour{
         Vector2 targetPos = (Vector2)target.position + (DegreeToVector2(targetAngle)*targetDistance);
 
         Vector2 dir = (targetPos - (Vector2)transform.position).normalized;
-
+        Vector2 targetDir = target.position - transform.position;
+        float xScale = Mathf.Abs( transform.localScale.x);
+        float lookDir = targetDir.x/Mathf.Abs(targetDir.x);
+        transform.localScale = new Vector3(-xScale*lookDir, transform.localScale.y, transform.localScale.z);
 
         rb.AddForce(force * dir * Time.deltaTime);
         Vector2 vel = Vector2.ClampMagnitude(rb.velocity, MaxVelocity);
