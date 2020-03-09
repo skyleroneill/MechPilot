@@ -1155,6 +1155,7 @@ GameObject:
   - component: {fileID: 120216497}
   - component: {fileID: 120216496}
   - component: {fileID: 120216500}
+  - component: {fileID: 120216501}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -1260,6 +1261,18 @@ MonoBehaviour:
   maxHitPoints: 4
   currentHitPoints: 0
   iTime: 0.15
+--- !u!114 &120216501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120216495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44ca8fee6cfcad41885d9b6828b9181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &139911741
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,7 +5113,7 @@ PrefabInstance:
     - target: {fileID: 8786989000501270469, guid: 0eb97881727da29439a810c0e34c22c4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8786989000501270488, guid: 0eb97881727da29439a810c0e34c22c4,
         type: 3}
@@ -17752,11 +17765,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 120216499}
     m_Modifications:
-    - target: {fileID: 8953224264502346608, guid: 7e2489c9bae81524788ffb115a963373,
-        type: 3}
-      propertyPath: m_Name
-      value: Melee
-      objectReference: {fileID: 0}
     - target: {fileID: 8953224264502346619, guid: 7e2489c9bae81524788ffb115a963373,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17826,6 +17834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.174804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8953224264502346608, guid: 7e2489c9bae81524788ffb115a963373,
+        type: 3}
+      propertyPath: m_Name
+      value: Melee
       objectReference: {fileID: 0}
     - target: {fileID: 8953224264502346620, guid: 7e2489c9bae81524788ffb115a963373,
         type: 3}
