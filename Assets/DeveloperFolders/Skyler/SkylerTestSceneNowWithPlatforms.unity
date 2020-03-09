@@ -16407,5 +16407,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].animationEffects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].animationEffects.Array.data[0].animationParameter.parameterName
+      value: jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].moveEffects.Array.data[0].animationParameters.Array.data[0].parameterName
+      value: jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: keyDownEffects.Array.data[0].moveEffects.Array.data[0].effectDelay
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
