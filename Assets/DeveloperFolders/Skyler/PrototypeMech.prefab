@@ -729,7 +729,9 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0.03
       speed: 20
+      maxSpeed: 0
       effectDelay: 0.2
+      capMaxSpeed: 0
       mustBeGrounded: 1
       faceMoveDirection: 0
       animationParameters:
@@ -747,7 +749,7 @@ MonoBehaviour:
         distance: 0.2
         layerMask:
           serializedVersion: 2
-          m_Bits: 1024
+          m_Bits: 256
       onCoolDown: 0
     animationEffects: []
   keyUpEffects:
@@ -782,42 +784,13 @@ MonoBehaviour:
     moveEffects:
     - movingRB: {fileID: 2108645127616032459}
       moveDirection: {x: 1, y: 0}
-      moveType: 0
+      moveType: 2
       energyUsage: 0
       coolDown: 0
-      speed: 10
+      speed: 5
+      maxSpeed: 10
       effectDelay: 0
-      mustBeGrounded: 0
-      faceMoveDirection: 1
-      animationParameters:
-      - parameterType: 1
-        parameterName: moving
-        boolValue: 1
-        floatValue: 0
-        intValue: 0
-        delay: 0
-      groundCheckParams:
-        origin: {fileID: 0}
-        size: {x: 0, y: 0}
-        angle: 0
-        direction: {x: 0, y: 0}
-        distance: 0
-        layerMask:
-          serializedVersion: 2
-          m_Bits: 0
-      onCoolDown: 0
-    animationEffects: []
-  - holdKey: 97
-    projectileEffects: []
-    meleeEffects: []
-    moveEffects:
-    - movingRB: {fileID: 2108645127616032459}
-      moveDirection: {x: -1, y: 0}
-      moveType: 0
-      energyUsage: 0
-      coolDown: 0
-      speed: 10
-      effectDelay: 0
+      capMaxSpeed: 1
       mustBeGrounded: 0
       faceMoveDirection: 1
       animationParameters:
@@ -829,13 +802,46 @@ MonoBehaviour:
         delay: 0
       groundCheckParams:
         origin: {fileID: 2108645127616032457}
-        size: {x: 0, y: 0}
+        size: {x: 1, y: 0.1}
         angle: 0
-        direction: {x: 0, y: 0}
-        distance: 0
+        direction: {x: 0, y: -0.1}
+        distance: 0.2
         layerMask:
           serializedVersion: 2
-          m_Bits: 0
+          m_Bits: 256
+      onCoolDown: 0
+    animationEffects: []
+  - holdKey: 97
+    projectileEffects: []
+    meleeEffects: []
+    moveEffects:
+    - movingRB: {fileID: 2108645127616032459}
+      moveDirection: {x: -1, y: 0}
+      moveType: 2
+      energyUsage: 0
+      coolDown: 0
+      speed: 5
+      maxSpeed: 10
+      effectDelay: 0
+      capMaxSpeed: 1
+      mustBeGrounded: 0
+      faceMoveDirection: 1
+      animationParameters:
+      - parameterType: 1
+        parameterName: moving
+        boolValue: 1
+        floatValue: 0
+        intValue: 0
+        delay: 0
+      groundCheckParams:
+        origin: {fileID: 2108645127616032457}
+        size: {x: 1, y: 0.1}
+        angle: 0
+        direction: {x: 0, y: -0.1}
+        distance: 0.2
+        layerMask:
+          serializedVersion: 2
+          m_Bits: 256
       onCoolDown: 0
     animationEffects: []
 --- !u!114 &2832928912483496879

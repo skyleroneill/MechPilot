@@ -48,7 +48,9 @@ public struct MoveEffect
     public int energyUsage;
     public float coolDown;
     public float speed;
+    public float maxSpeed;
     public float effectDelay;
+    public bool capMaxSpeed;
     public bool mustBeGrounded;
     public bool faceMoveDirection;
     public AnimationParameter[] animationParameters;
@@ -471,6 +473,12 @@ public class MechPartController : MonoBehaviour
         {
             effect.movingRB.AddForce(effect.moveDirection.normalized * effect.speed,
                                                                ForceMode2D.Impulse);
+        }
+
+        // Maybe cap the velocity
+        if(effect.capMaxSpeed && effect.movingRB.velocity.magnitude > effect.maxSpeed)
+        {
+            effect.movingRB.velocity = effect.moveDirection.normalized * effect.maxSpeed + Vector2.up * effect.movingRB.velocity.y;
         }
     }
     #endregion Perform Effects Region
