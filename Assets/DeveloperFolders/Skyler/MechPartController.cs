@@ -476,7 +476,7 @@ public class MechPartController : MonoBehaviour
         }
 
         // Maybe cap the velocity
-        if(effect.capMaxSpeed && effect.moveDirection.magnitude > effect.maxSpeed)
+        if(effect.capMaxSpeed && effect.movingRB.velocity.magnitude > effect.maxSpeed)
         {
             effect.movingRB.velocity = effect.moveDirection.normalized * effect.maxSpeed + Vector2.up * effect.movingRB.velocity.y;
         }
