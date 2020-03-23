@@ -5,8 +5,8 @@ using UnityEngine;
 public class MechPartConsole : MonoBehaviour
 {
     public MechPartController mechPart;
-    public KeyCode activationKey;
-    public KeyCode repairKey;
+    public KeyCode activationKey = KeyCode.E;
+    public KeyCode repairKey = KeyCode.Q;
     public GameObject pilot;
     public bool canActivate = true;
     public bool checkPartHealth = true;
