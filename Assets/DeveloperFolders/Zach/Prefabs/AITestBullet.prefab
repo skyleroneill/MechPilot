@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3166870183736439083}
   - component: {fileID: 3166870183736439086}
   - component: {fileID: 3166870183736439082}
-  m_Layer: 9
-  m_Name: TestBullet 4
+  m_Layer: 11
+  m_Name: AITestBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   power: 1
-  ignoreLayers: 0b00000009000000
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 2304
   lifeTime: 10
   moveForward: 1
   destroyOnHit: 1

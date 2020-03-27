@@ -15,7 +15,7 @@ public struct ProjectileEffect
     public float lifeTime;
     public float angleOffset;
     public float effectDelay;
-    // TODO: Ignore layers
+    public LayerMask ignoreLayers;
     public AnimationParameter[] animationParameters;
     [HideInInspector]
     public bool onCoolDown;
@@ -32,6 +32,7 @@ public struct MeleeEffect
     public float lifeTime;
     public float effectDelay;
     public bool hitBoxAsChild;
+    public LayerMask ignoreLayers;
     public AnimationParameter[] animationParameters;
     [HideInInspector]
     public bool onCoolDown;
@@ -47,7 +48,9 @@ public struct MoveEffect
     public int energyUsage;
     public float coolDown;
     public float speed;
+    public float maxSpeed;
     public float effectDelay;
+    public bool capMaxSpeed;
     public bool mustBeGrounded;
     public bool faceMoveDirection;
     public AnimationParameter[] animationParameters;
@@ -349,7 +352,7 @@ public class MechPartController : MonoBehaviour
         newProjectile.SetSpeed(effect.speed);
         newProjectile.SetShooter(gameObject);
         newProjectile.SetLifeTime(effect.lifeTime);
-        // TODO: Add ignore layers
+        newProjectile.SetIgnoreLayers(effect.ignoreLayers);
     }
 
     private void PerformMeleeEffect(MeleeEffect effect, KeyType type, int keyEffect, int meleeEffect)
@@ -404,7 +407,7 @@ public class MechPartController : MonoBehaviour
         newHitBox.SetPower(effect.power);
         newHitBox.SetLifeTime(effect.lifeTime);
         newHitBox.SetAttacker(gameObject);
-        // TODO: Add ignore layers
+        newHitBox.SetIgnoreLayers(effect.ignoreLayers);
     }
 
     private void PerformMoveEffect(MoveEffect effect, KeyType type, int keyEffect, int moveEffect)
@@ -470,6 +473,12 @@ public class MechPartController : MonoBehaviour
         {
             effect.movingRB.AddForce(effect.moveDirection.normalized * effect.speed,
                                                                ForceMode2D.Impulse);
+        }
+
+        // Maybe cap the velocity
+        if(effect.capMaxSpeed && effect.movingRB.velocity.magnitude > effect.maxSpeed)
+        {
+            effect.movingRB.velocity = effect.moveDirection.normalized * effect.maxSpeed + Vector2.up * effect.movingRB.velocity.y;
         }
     }
     #endregion Perform Effects Region

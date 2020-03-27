@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: 9df065280459b434db4c28318c541db6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1605762990440210283
+    second: Interior
+  - first:
+      213: 7580904248885095212
+    second: Head Screen
+  - first:
+      213: 7108470408694143696
+    second: Screen
+  - first:
+      213: -6296789892415695290
+    second: Left Arm Screen
+  - first:
+      213: 3880728668873307969
+    second: Torso Screen
+  - first:
+      213: -8557624467139131138
+    second: Right Arm Screen
+  - first:
+      213: -2860857713787659661
+    second: Interior v2.1_6
+  - first:
+      213: -3993461320696143099
+    second: Interior v2.1_7
+  - first:
+      213: 4464191663992162377
+    second: Legs Screen
+  - first:
+      213: 2802713538058206570
+    second: Interior v2.1_9
+  - first:
+      213: 1448166356166627560
+    second: Interior v2.1_10
+  - first:
+      213: -6365328284281432049
+    second: Interior v2.1_11
+  - first:
+      213: -8297065245724723790
+    second: Interior v2.1_12
+  - first:
+      213: 6522953261090773902
+    second: Interior v2.1_13
+  - first:
+      213: 9000913102842671276
+    second: Interior v2.1_14
+  - first:
+      213: -2043618054863985890
+    second: Interior v2.1_15
+  - first:
+      213: -6725692690446095436
+    second: Interior v2.1_16
+  - first:
+      213: -3246040214033108728
+    second: Platform
+  - first:
+      213: 1439768421188967532
+    second: Skinny Platform 1
+  - first:
+      213: -5652419278632861237
+    second: Skinny Platform 2
+  - first:
+      213: 9097725413067675457
+    second: Skinny Platform 3
+  - first:
+      213: -2721622423110441402
+    second: Beam 1
+  - first:
+      213: -770676018192858340
+    second: Beam 2
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Interior
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 4
+        width: 245
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590a751611f27b9e0800000000000000
+      internalID: -1605762990440210283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Screen
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 308
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bab0fbf38c43960800000000000000
+      internalID: 7580904248885095212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screen
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 281
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da1796ac2c56a260800000000000000
+      internalID: 7108470408694143696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Screen
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 298
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646da4564fe4d98a0800000000000000
+      internalID: -6296789892415695290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torso Screen
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 298
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1473ed1d92e1bd530800000000000000
+      internalID: 3880728668873307969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Arm Screen
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 298
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef80bfa23e53d3980800000000000000
+      internalID: -8557624467139131138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Legs Screen
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 286
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94843858aaef3fd30800000000000000
+      internalID: 4464191663992162377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 235
+        width: 91
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8017ce3af9fb3f2d0800000000000000
+      internalID: -3246040214033108728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skinny Platform 1
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 212
+        width: 69
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c1bc730c51bf310800000000000000
+      internalID: 1439768421188967532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skinny Platform 2
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 198
+        width: 48
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1c4872d929e81b0800000000000000
+      internalID: -5652419278632861237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skinny Platform 3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 178
+        width: 73
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14751f5bf0d914e70800000000000000
+      internalID: 9097725413067675457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 90
+        width: 22
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646a3c173dada3ad0800000000000000
+      internalID: -2721622423110441402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 90
+        width: 22
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13c3b2ae320e45f0800000000000000
+      internalID: -770676018192858340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
