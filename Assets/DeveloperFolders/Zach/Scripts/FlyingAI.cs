@@ -32,6 +32,13 @@ public class FlyingAI : MonoBehaviour{
     [SerializeField]
     float projectileSpeed;
 
+    [SerializeField]
+    bool invertFacingDir;
+
+    bool hostile = false;
+    [SerializeField]
+    float hostileStartRange;
+
     #endregion
   
     #region Private Variables
@@ -55,6 +62,8 @@ public class FlyingAI : MonoBehaviour{
         targetAngle = minAngle + Random.value * (maxAngle-minAngle);
     }
 
+
+
     void Move(){
         Vector2 targetPos = (Vector2)target.position + (DegreeToVector2(targetAngle)*targetDistance);
 
@@ -62,6 +71,7 @@ public class FlyingAI : MonoBehaviour{
         Vector2 targetDir = target.position - transform.position;
         float xScale = Mathf.Abs( transform.localScale.x);
         float lookDir = targetDir.x/Mathf.Abs(targetDir.x);
+        lookDir = invertFacingDir ? -lookDir : lookDir;
         transform.localScale = new Vector3(-xScale*lookDir, transform.localScale.y, transform.localScale.z);
 
         rb.AddForce(force * dir * Time.deltaTime);
@@ -87,16 +97,30 @@ public class FlyingAI : MonoBehaviour{
     }
     #endregion
 
+    void CheckHostility(){
+        if((target.position - transform.position).magnitude < hostileStartRange)hostile = true;
+        if(hostileStartRange == 0) hostile = true;
+        if(GetComponent<Health>().GetMaxHealth() != GetComponent<Health>().GetHealth()) {
+            hostile = true;
+            print("NO" + GetComponent<Health>().GetMaxHealth() + " " + GetComponent<Health>().GetHealth());
+        }
+    }
+
     #region Initialization
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.Find("ProtoBot_Head").transform;
         curChangeTimer = targetChangeTime;
+
+        float lookDir = invertFacingDir ? -1 : 1;
+        transform.localScale = new Vector3(-transform.localScale.x*lookDir, transform.localScale.y, transform.localScale.z);
     }   
     #endregion
     
     #region Update Loop
     void Update(){
+        CheckHostility();
+        if(!hostile) return;
         ChangeTargetPoint();
         Shoot();
         Move();
