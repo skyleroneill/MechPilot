@@ -2059,7 +2059,9 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0.03
       speed: 10
+      maxSpeed: 0
       effectDelay: 0
+      capMaxSpeed: 0
       mustBeGrounded: 1
       faceMoveDirection: 0
       animationParameters: []
@@ -2086,7 +2088,9 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0
       speed: 10
+      maxSpeed: 0
       effectDelay: 0
+      capMaxSpeed: 0
       mustBeGrounded: 0
       faceMoveDirection: 1
       animationParameters: []
@@ -2111,7 +2115,9 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0
       speed: 10
+      maxSpeed: 0
       effectDelay: 0
+      capMaxSpeed: 0
       mustBeGrounded: 0
       faceMoveDirection: 1
       animationParameters: []
@@ -4625,9 +4631,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 493520857}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1606432330}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!1 &598773758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4878,6 +4887,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigVito
       objectReference: {fileID: 0}
+    - target: {fileID: 8786989000501270469, guid: 0eb97881727da29439a810c0e34c22c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8786989000501270488, guid: 0eb97881727da29439a810c0e34c22c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4886,7 +4900,7 @@ PrefabInstance:
     - target: {fileID: 8786989000501270488, guid: 0eb97881727da29439a810c0e34c22c4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.02
+      value: 16.1
       objectReference: {fileID: 0}
     - target: {fileID: 8786989000501270488, guid: 0eb97881727da29439a810c0e34c22c4,
         type: 3}
@@ -7733,9 +7747,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 2000828447}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1606432330}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &844177225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8695,6 +8712,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2108645127616032456, guid: 29e00bc360776e341ab4eb4893f58111,
+        type: 3}
+      propertyPath: m_Name
+      value: PrototypeMech
+      objectReference: {fileID: 0}
     - target: {fileID: 2108645127616032457, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8749,11 +8771,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2108645127616032456, guid: 29e00bc360776e341ab4eb4893f58111,
-        type: 3}
-      propertyPath: m_Name
-      value: PrototypeMech
       objectReference: {fileID: 0}
     - target: {fileID: 2108645127616032458, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
@@ -11033,9 +11050,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 1079563713}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1606432330}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &1212903668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12233,9 +12253,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 85233229}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1606432330}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &1400222422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17558,3 +17581,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 059032c2f90a50943a549cd3b5d84b37, type: 3}
+--- !u!1001 &6855042550001154125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6855042549228406125, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_Name
+      value: BirdBossBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797763487621612150, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4fb6935d4986f084d9be62c142a11351, type: 3}

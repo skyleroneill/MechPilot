@@ -15,12 +15,21 @@ public class NPCDeath : MonoBehaviour
 
     private Health hp;
 
+    DeathEvent[] deathEvents;
     private void Start(){
         hp = GetComponent<Health>();
+        deathEvents = GetComponents<DeathEvent>();
+    }
+
+    private void TriggerDeathEvents(){
+        foreach(DeathEvent e in deathEvents){
+            e.TriggerEvent();
+        }
     }
 
     private void Update(){
         if(hp.GetHealth() <= 0){
+            TriggerDeathEvents();
             // If one was specified, then spawn the particle system
             if(particles)
                 Instantiate(particles, transform.position, transform.rotation);

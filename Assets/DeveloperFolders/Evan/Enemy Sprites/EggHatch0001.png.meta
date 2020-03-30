@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/DeveloperFolders/Evan/Enemy Sprites/EggHatch0001.png.meta
 guid: 026013af425465943b4ce296825ff2ab
+=======
+guid: 1232ad36a715a19459950ab54ee4cd04
+>>>>>>> e08503f1226281759a613ae8f8b8d1bbcb090682:Assets/DeveloperFolders/Evan/Enemy Sprites/RatWalk0001.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
