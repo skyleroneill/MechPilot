@@ -56,14 +56,19 @@ public class PlayerController : MonoBehaviour
     {
         if (!isHacking)
         {
-            var horizontalMovement = Input.GetAxis("Horizontal"); 
+            var horizontalMovement = Input.GetAxisRaw("Horizontal"); 
             rb2d.velocity = new Vector2(horizontalMovement * movementSpeed, rb2d.velocity.y);
 
             // Kinda hacky, but looks WAY better in game
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
                 anim.SetBool("isRunning", true);
+            }
             else
+            {
                 anim.SetBool("isRunning", false);
+            }
+                
 
             if (isFacingRight == false && horizontalMovement > 0)
                 Flip();

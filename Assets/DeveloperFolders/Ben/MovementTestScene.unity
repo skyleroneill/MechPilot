@@ -1981,7 +1981,7 @@ PrefabInstance:
     - target: {fileID: 6117407013348060173, guid: bb435367a2380804c9fc6522dbf8f093,
         type: 3}
       propertyPath: jumpPower
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6117407013348060173, guid: bb435367a2380804c9fc6522dbf8f093,
         type: 3}
