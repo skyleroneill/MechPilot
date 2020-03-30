@@ -315,7 +315,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ea9ea04631f0aad4f901edbd8ffd8b30, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   jumpPower: 8
-  fallMultiplier: 2.5
+  fallMultiplier: 4
   lowJumpMultiplier: 2
   feetPosition: {fileID: 6117407012245916432}
   groundLayer:
