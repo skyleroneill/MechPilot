@@ -144,12 +144,12 @@ public class PlayerController : MonoBehaviour
         if (hidePlayer)
         {
             isHacking = true;
-            sprite.gameObject.SetActive(false);
+            sprite.enabled = false;
         }
         else
         {
             isHacking = false;
-            sprite.gameObject.SetActive(true);
+            sprite.enabled = true;
         }
     }
 }
