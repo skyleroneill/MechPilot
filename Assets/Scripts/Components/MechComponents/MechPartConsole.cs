@@ -15,7 +15,10 @@ public class MechPartConsole : MonoBehaviour
 
     private bool pilotNearby = false;
     private bool activatable = true;
+    private bool isActive = false;
+    private bool isRepairing = false;
     private Health partHealth;
+    private Animator anim;
 
     private float repairTimer = 0f;
 
@@ -24,6 +27,7 @@ public class MechPartConsole : MonoBehaviour
         // Don't check for health if there is none
         checkPartHealth = mechPart.gameObject.GetComponent<Health>() != null;
         partHealth = mechPart.gameObject.GetComponent<Health>();
+        anim = mechPart.gameObject.GetComponent<Animator>();
         activatable = canActivate;
     }
 
@@ -32,6 +36,21 @@ public class MechPartConsole : MonoBehaviour
         activatable = checkPartHealth ? CheckPartAlive() : canActivate;
         ActivatePart();
         RepairPart();
+
+        if (anim)
+            AnimControl();
+    }
+
+    private void AnimControl()
+    {
+        // Prioritize the active animation over the repair animation
+        isActive = mechPart.IsActive();
+        isRepairing = isActive ? false : repairTimer > 0f;
+
+        anim.SetBool("active", isActive);
+        anim.SetBool("repairing", isRepairing);
+
+            // player.GetComponent<PlayerController>().HideOurShame(isActive || isReparing);
     }
 
     private bool CheckPartAlive()
@@ -44,6 +63,7 @@ public class MechPartConsole : MonoBehaviour
     {
         if (!activatable)
         {
+            // Disable the mech part if it is not activatable, but is active
             if (mechPart.IsActive())
             {
                 pilot.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
