@@ -124,17 +124,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5656184054205806540}
     m_Modifications:
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
-        type: 3}
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -210,6 +199,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Egg
       objectReference: {fileID: 0}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
+        type: 3}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddeacaec86d14ec4f94d0532d197cc50, type: 3}
 --- !u!1 &8238593076545967077 stripped
@@ -231,17 +231,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5656184054205806540}
     m_Modifications:
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
-        type: 3}
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +306,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Egg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
+        type: 3}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddeacaec86d14ec4f94d0532d197cc50, type: 3}
 --- !u!1 &1295847832054051499 stripped
@@ -338,17 +338,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5656184054205806540}
     m_Modifications:
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
-        type: 3}
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -357,7 +346,7 @@ PrefabInstance:
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19420582
+      value: 0.259
       objectReference: {fileID: 0}
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
@@ -424,6 +413,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Egg (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
+        type: 3}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddeacaec86d14ec4f94d0532d197cc50, type: 3}
 --- !u!1 &641579706094327104 stripped
@@ -445,17 +445,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5656184054205806540}
     m_Modifications:
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
-        type: 3}
-    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -464,7 +453,7 @@ PrefabInstance:
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21085203
+      value: 0.312
       objectReference: {fileID: 0}
     - target: {fileID: 5416867583785149195, guid: ddeacaec86d14ec4f94d0532d197cc50,
         type: 3}
@@ -531,6 +520,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Egg (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 026013af425465943b4ce296825ff2ab,
+        type: 3}
+    - target: {fileID: 2754509264444103024, guid: ddeacaec86d14ec4f94d0532d197cc50,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddeacaec86d14ec4f94d0532d197cc50, type: 3}
 --- !u!1 &307535202732764096 stripped
@@ -552,48 +552,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6855042549228406127}
     m_Modifications:
-    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: eggs.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: eggs.Array.data[0]
-      value: 
-      objectReference: {fileID: 8238593076545967077}
-    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: eggs.Array.data[1]
-      value: 
-      objectReference: {fileID: 1295847832054051499}
-    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: eggs.Array.data[2]
-      value: 
-      objectReference: {fileID: 307535202732764096}
-    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: eggs.Array.data[3]
-      value: 
-      objectReference: {fileID: 641579706094327104}
-    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6496a1dce1a8a2d42abdb32c3e639247,
-        type: 3}
-    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: m_Size.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: m_Size.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8786989000501270469, guid: f385cf864461f9f45b30db880887cf85,
-        type: 3}
-      propertyPath: m_Name
-      value: BirdBoss
-      objectReference: {fileID: 0}
     - target: {fileID: 8786989000501270488, guid: f385cf864461f9f45b30db880887cf85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -648,6 +606,48 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: eggs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: eggs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8238593076545967077}
+    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: eggs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1295847832054051499}
+    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: eggs.Array.data[2]
+      value: 
+      objectReference: {fileID: 307535202732764096}
+    - target: {fileID: 316481627, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: eggs.Array.data[3]
+      value: 
+      objectReference: {fileID: 641579706094327104}
+    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6496a1dce1a8a2d42abdb32c3e639247,
+        type: 3}
+    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741925373, guid: f385cf864461f9f45b30db880887cf85, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8786989000501270469, guid: f385cf864461f9f45b30db880887cf85,
+        type: 3}
+      propertyPath: m_Name
+      value: BirdBoss
       objectReference: {fileID: 0}
     - target: {fileID: 8786989000501270490, guid: f385cf864461f9f45b30db880887cf85,
         type: 3}
