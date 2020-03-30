@@ -1,0 +1,886 @@
+fileFormatVersion: 2
+guid: 715ed38bf0cfc5448863911e219a6ca3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6512978367907413078
+    second: Front Shoulder
+  - first:
+      213: -2308349959533335629
+    second: Visor
+  - first:
+      213: -8229015134847215908
+    second: Head
+  - first:
+      213: -4966406193277870983
+    second: Damaged Front Shoulder
+  - first:
+      213: -4003883357884560189
+    second: Damaged Back Shoulder
+  - first:
+      213: -2130053110648593977
+    second: Front Arm
+  - first:
+      213: 281553378818047051
+    second: Front Fist
+  - first:
+      213: 8228539872354938436
+    second: Torso
+  - first:
+      213: 4230232465379481636
+    second: Damaged Front Arm
+  - first:
+      213: -5759816761307614552
+    second: Robot Sprite and Damaged_9
+  - first:
+      213: -5656141162557468441
+    second: Robot Sprite and Damaged_10
+  - first:
+      213: 978160617403391652
+    second: Damaged Back Fist
+  - first:
+      213: 6175066994898796583
+    second: Robot Sprite and Damaged_12
+  - first:
+      213: -908081996819343629
+    second: Damaged Visor
+  - first:
+      213: -5324189654589038092
+    second: Robot Sprite and Damaged_14
+  - first:
+      213: -1584670436108435019
+    second: Damaged Head
+  - first:
+      213: -9026639517125336936
+    second: Damaged Torso
+  - first:
+      213: -2210911239066567431
+    second: Robot Sprite and Damaged_17
+  - first:
+      213: 6670199531232547006
+    second: Robot Sprite and Damaged_18
+  - first:
+      213: 4111219569325534204
+    second: Robot Sprite and Damaged_19
+  - first:
+      213: -714355753430837148
+    second: Back Arm
+  - first:
+      213: -6079691843981262800
+    second: Back Fist
+  - first:
+      213: -4381524069736954782
+    second: Robot Sprite and Damaged_22
+  - first:
+      213: -1418682593099651921
+    second: Robot Sprite and Damaged_23
+  - first:
+      213: 5388061983519300225
+    second: Back Shin
+  - first:
+      213: -4675828530541970711
+    second: Front Shin
+  - first:
+      213: 8753274561076279689
+    second: Robot Sprite and Damaged_26
+  - first:
+      213: 7393085311301715525
+    second: Damaged Front Thigh
+  - first:
+      213: -4448557047449594704
+    second: Damaged Front Shin
+  - first:
+      213: 736080078573767895
+    second: Damaged Back Thigh
+  - first:
+      213: -9149187485901072172
+    second: Damaged Back Shin
+  - first:
+      213: -5222633949583402554
+    second: Back Thigh
+  - first:
+      213: -4331136980090455556
+    second: Back Foot
+  - first:
+      213: -1541984455937688692
+    second: Front Thigh
+  - first:
+      213: 92356482903147648
+    second: Front Foot
+  - first:
+      213: 4941691371226742503
+    second: Damaged Front Foot
+  - first:
+      213: 263084918332100878
+    second: Damaged Back Foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Front Shoulder
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 211
+        width: 25
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49048454, y: 0.8320513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cbce0815fb26a50800000000000000
+      internalID: 6512978367907413078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Visor
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 240
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5146434, y: 0.39749908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb6ab421f717ffd0800000000000000
+      internalID: -2308349959533335629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 232
+        width: 27
+        height: 23
+      alignment: 9
+      pivot: {x: 0.34380764, y: 0.27080438}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd65e14855aaccd80800000000000000
+      internalID: -8229015134847215908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Front Shoulder
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 208
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c5f5f51e7c31bb0800000000000000
+      internalID: -4966406193277870983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Back Shoulder
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 211
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc413bac495f68c0800000000000000
+      internalID: -4003883357884560189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Arm
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 211
+        width: 50
+        height: 22
+      alignment: 9
+      pivot: {x: 0.21497665, y: 0.5134964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1231b3bf78072e0800000000000000
+      internalID: -2130053110648593977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Fist
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 216
+        width: 16
+        height: 17
+      alignment: 9
+      pivot: {x: 0.10217619, y: 0.40537128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cb2c96e4748e300800000000000000
+      internalID: 281553378818047051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torso
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 148
+        width: 59
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5357394, y: 0.070469044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44eaadfca65a13270800000000000000
+      internalID: 8228539872354938436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Front Arm
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 208
+        width: 50
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428d448b30ec4ba30800000000000000
+      internalID: 4230232465379481636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot Sprite and Damaged_9
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 213
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a23be22c250110b0800000000000000
+      internalID: -5759816761307614552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot Sprite and Damaged_10
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 212
+        width: 50
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e01c4684995181b0800000000000000
+      internalID: -5656141162557468441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Back Fist
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 216
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae1b9526ef139d00800000000000000
+      internalID: 978160617403391652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot Sprite and Damaged_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 198
+        width: 53
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7208e2707be32b550800000000000000
+      internalID: 6175066994898796583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Visor
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 174
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6d7a03c38d563f0800000000000000
+      internalID: -908081996819343629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot Sprite and Damaged_14
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 185
+        width: 60
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f12969c7bdac16b0800000000000000
+      internalID: -5324189654589038092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Head
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 167
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b181b162ae120ae0800000000000000
+      internalID: -1584670436108435019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Torso
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 113
+        width: 59
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890ad323f2feab280800000000000000
+      internalID: -9026639517125336936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot Sprite and Damaged_17
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 119
+        width: 25
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5229716, y: 0.85684174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcb48521f34151e0800000000000000
+      internalID: -2210911239066567431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Arm
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 120
+        width: 50
+        height: 22
+      alignment: 9
+      pivot: {x: 0.19997017, y: 0.4851761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4689f712a391616f0800000000000000
+      internalID: -714355753430837148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Fist
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 124
+        width: 15
+        height: 17
+      alignment: 9
+      pivot: {x: 0.1086558, y: 0.44244835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03048afba7890aba0800000000000000
+      internalID: -6079691843981262800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Shin
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 22
+        width: 29
+        height: 72
+      alignment: 9
+      pivot: {x: 0.50468236, y: 0.8915717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a547ba3dd36ca40800000000000000
+      internalID: 5388061983519300225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Shin
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 22
+        width: 29
+        height: 72
+      alignment: 9
+      pivot: {x: 0.44269904, y: 0.88842404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eab86e99be1c1fb0800000000000000
+      internalID: -4675828530541970711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Front Thigh
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 22
+        width: 19
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5460c4e9be3899660800000000000000
+      internalID: 7393085311301715525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Front Shin
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 28
+        width: 27
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4d4bf4fec8342c0800000000000000
+      internalID: -4448557047449594704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Back Thigh
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 23
+        width: 19
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc81a97ee4173a00800000000000000
+      internalID: 736080078573767895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Back Shin
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 29
+        width: 27
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8da6fb47e870180800000000000000
+      internalID: -9149187485901072172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Thigh
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 16
+        width: 19
+        height: 67
+      alignment: 9
+      pivot: {x: 0.4785873, y: 0.88862175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c99f23f71a7587b0800000000000000
+      internalID: -5222633949583402554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Foot
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 2
+        width: 34
+        height: 16
+      alignment: 9
+      pivot: {x: 0.34444404, y: 0.60170937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9762c2dd5b4e3c0800000000000000
+      internalID: -4331136980090455556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Thigh
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 16
+        width: 19
+        height: 67
+      alignment: 9
+      pivot: {x: 0.4785875, y: 0.9007662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bf8ae9e45c99ae0800000000000000
+      internalID: -1541984455937688692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front Foot
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2
+        width: 34
+        height: 16
+      alignment: 9
+      pivot: {x: 0.368375, y: 0.57628196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084852c5bbd184100800000000000000
+      internalID: 92356482903147648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Front Foot
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 9
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee3593be1a649440800000000000000
+      internalID: 4941691371226742503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damaged Back Foot
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 9
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0192fed65aa6a300800000000000000
+      internalID: 263084918332100878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
