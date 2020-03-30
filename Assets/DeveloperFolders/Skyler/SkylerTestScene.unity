@@ -2059,7 +2059,9 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0.03
       speed: 10
+      maxSpeed: 0
       effectDelay: 0
+      capMaxSpeed: 0
       mustBeGrounded: 1
       faceMoveDirection: 0
       animationParameters: []
@@ -2086,7 +2088,9 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0
       speed: 10
+      maxSpeed: 0
       effectDelay: 0
+      capMaxSpeed: 0
       mustBeGrounded: 0
       faceMoveDirection: 1
       animationParameters: []
@@ -2111,7 +2115,9 @@ MonoBehaviour:
       energyUsage: 0
       coolDown: 0
       speed: 10
+      maxSpeed: 0
       effectDelay: 0
+      capMaxSpeed: 0
       mustBeGrounded: 0
       faceMoveDirection: 1
       animationParameters: []
@@ -4613,7 +4619,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 1160938556}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 0}
+  canActivate: 1
+  checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!1 &598773758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5340,6 +5351,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5352,6 +5366,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5364,6 +5381,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 17
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5376,6 +5396,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -60
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5388,6 +5411,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -5
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5400,6 +5426,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 72
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5412,6 +5441,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 28
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5424,6 +5456,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -70
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5436,6 +5471,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: -30
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     - projectile: {fileID: 3166870183736439081, guid: c612600d7800ccb4e93bb493f6aad7b6,
@@ -5448,6 +5486,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 88
       effectDelay: 1
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     meleeEffects: []
@@ -6065,6 +6106,9 @@ MonoBehaviour:
       lifeTime: 0.01
       effectDelay: 0
       hitBoxAsChild: 0
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     moveEffects: []
@@ -7686,7 +7730,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 122928931}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 0}
+  canActivate: 1
+  checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &844177225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8863,6 +8912,9 @@ MonoBehaviour:
       lifeTime: 5
       angleOffset: 0
       effectDelay: 0
+      ignoreLayers:
+        serializedVersion: 2
+        m_Bits: 0
       animationParameters: []
       onCoolDown: 0
     meleeEffects: []
@@ -10919,7 +10971,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 1118825679}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 0}
+  canActivate: 1
+  checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &1212903668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12048,7 +12105,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 2034191795}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 0}
+  canActivate: 1
+  checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &1400222422
 BoxCollider2D:
   m_ObjectHideFlags: 0
