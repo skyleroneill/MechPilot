@@ -104,6 +104,9 @@ public class FlyingAI : MonoBehaviour{
             hostile = true;
             print("NO" + GetComponent<Health>().GetMaxHealth() + " " + GetComponent<Health>().GetHealth());
         }
+        if(hostile){
+            GetComponentInChildren<Animator>().SetBool("Hostile", true);
+        }
     }
 
     #region Initialization

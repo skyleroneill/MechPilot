@@ -17596,17 +17596,17 @@ PrefabInstance:
     - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.68
+      value: 24.5
       objectReference: {fileID: 0}
     - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5681506
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.421875
+      value: -3.98
       objectReference: {fileID: 0}
     - target: {fileID: 6855042549228406127, guid: 4fb6935d4986f084d9be62c142a11351,
         type: 3}
@@ -17647,6 +17647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797763487621612150, guid: 4fb6935d4986f084d9be62c142a11351,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fb6935d4986f084d9be62c142a11351, type: 3}
