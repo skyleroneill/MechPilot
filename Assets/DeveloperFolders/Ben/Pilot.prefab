@@ -339,7 +339,7 @@ MonoBehaviour:
   feetPosition: {fileID: 6117407012245916432}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4352
   ladderLayer:
     serializedVersion: 2
     m_Bits: 512

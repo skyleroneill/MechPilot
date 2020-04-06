@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
             hit2d = Physics2D.CircleCast(feetPosition.position, 0.5f, Vector2.down, 0f, groundLayer);
             print($"Object's name: {hit2d.collider.name}");
             
-            if (hit2d.collider.gameObject.layer == LayerMask.NameToLayer("Jumpable"))
+            if (hit2d.collider.gameObject.layer == LayerMask.NameToLayer("Jumpable") && hit2d.collider.gameObject.layer != LayerMask.NameToLayer("BaseFloor"))
                 StartCoroutine(TemporaryTrigger(hit2d));
         }
     }

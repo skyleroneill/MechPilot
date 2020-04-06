@@ -27,6 +27,7 @@
             </e>
           </e>
         </e>
+        <e p="FollowActor.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="CommonComponents" t="Include">
