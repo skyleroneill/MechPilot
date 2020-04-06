@@ -10,6 +10,8 @@ public class FollowActor : MonoBehaviour
     [SerializeField]
     float strength;
 
+    [SerializeField]
+    bool lockX;
     // Update is called once per frame
 
     private void Awake(){
@@ -17,6 +19,12 @@ public class FollowActor : MonoBehaviour
     }
 
     void Update(){
+        float x = transform.position.x;
         transform.position = Vector3.Lerp(transform.position, target.position, strength * Time.deltaTime);
+        if (lockX) {
+            Vector3 pos = transform.position;
+            pos.SetX(x);
+            transform.position = pos;
+        }
     }
 }
