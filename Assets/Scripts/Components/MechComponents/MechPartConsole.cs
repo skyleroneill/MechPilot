@@ -15,7 +15,11 @@ public class MechPartConsole : MonoBehaviour
 
     private bool pilotNearby = false;
     private bool activatable = true;
+    private bool isActive = false;
+    private bool isRepairing = false;
+    private bool lastShame = false;
     private Health partHealth;
+    private Animator anim;
 
     private float repairTimer = 0f;
 
@@ -24,6 +28,7 @@ public class MechPartConsole : MonoBehaviour
         // Don't check for health if there is none
         checkPartHealth = mechPart.gameObject.GetComponent<Health>() != null;
         partHealth = mechPart.gameObject.GetComponent<Health>();
+        anim = gameObject.GetComponent<Animator>();
         activatable = canActivate;
     }
 
@@ -32,6 +37,25 @@ public class MechPartConsole : MonoBehaviour
         activatable = checkPartHealth ? CheckPartAlive() : canActivate;
         ActivatePart();
         RepairPart();
+
+        if (anim)
+            AnimControl();
+    }
+
+    private void AnimControl()
+    {
+        // Prioritize the active animation over the repair animation
+        isActive = mechPart.IsActive();
+        isRepairing = isActive ? false : isRepairing;
+
+        anim.SetBool("active", isActive);
+        anim.SetBool("repairing", isRepairing);
+        anim.SetBool("broken", !activatable);
+
+        if (lastShame != (isActive || isRepairing))
+            pilot.GetComponent<PlayerController>().HideOurShame(isActive || isRepairing);
+
+        lastShame = isActive || isRepairing;
     }
 
     private bool CheckPartAlive()
@@ -44,6 +68,7 @@ public class MechPartConsole : MonoBehaviour
     {
         if (!activatable)
         {
+            // Disable the mech part if it is not activatable, but is active
             if (mechPart.IsActive())
             {
                 pilot.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -70,10 +95,12 @@ public class MechPartConsole : MonoBehaviour
         {
             if (Input.GetKey(repairKey) && pilotNearby && !mechPart.IsActive())
             {
+                isRepairing = true;
                 repairTimer += Time.deltaTime;
             }
             else
             {
+                isRepairing = false;
                 repairTimer = 0f;
                 return;
             }
@@ -83,6 +110,10 @@ public class MechPartConsole : MonoBehaviour
                 partHealth.Heal(repairRate);
                 repairTimer = 0f;
             }
+        }
+        else
+        {
+            isRepairing = false;
         }
     }
 

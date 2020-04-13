@@ -149,6 +149,9 @@ public class MechPartController : MonoBehaviour
     public void ToggleActivation()
     {
         active = !active;
+
+        if (!active)
+           ResetAnimator();
     }
 
     public bool IsActive()
@@ -175,7 +178,7 @@ public class MechPartController : MonoBehaviour
 
         facingRight = transform.root.localScale.x >= 0;
 
-        // Rotate to part to aim at cursor
+        // Rotate part to aim at cursor
         if (rotatePartToCursor)
         {
             RotateTransformToCursor(transform);
@@ -501,6 +504,18 @@ public class MechPartController : MonoBehaviour
         zRotation = Mathf.Clamp(zRotation , partRotationConstraints.x, partRotationConstraints.y);
         trans.rotation = Quaternion.Euler(0f, 0f, zRotation);
     }
+
+    private void ResetAnimator()
+    {
+        if (!anim)
+            return;
+
+        foreach (AnimatorControllerParameter parameter in anim.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Bool)
+                anim.SetBool(parameter.name, false);
+        }
+    }
     #endregion Auxilary Function Region
 
     #region Coroutines
@@ -525,19 +540,19 @@ public class MechPartController : MonoBehaviour
     IEnumerator PlayAnimation(AnimationParameter param)
     {
         yield return new WaitForSeconds(param.delay);
-        if(param.parameterType == AnimationParameter.ParameterType.Trigger)
+        if(param.parameterType == AnimationParameter.ParameterType.Trigger && active)
         {
             anim.SetTrigger(param.parameterName);
         }
-        else if (param.parameterType == AnimationParameter.ParameterType.Bool)
+        else if (param.parameterType == AnimationParameter.ParameterType.Bool && active)
         {
             anim.SetBool(param.parameterName, param.boolValue);
         }
-        else if (param.parameterType == AnimationParameter.ParameterType.Float)
+        else if (param.parameterType == AnimationParameter.ParameterType.Float && active)
         {
             anim.SetFloat(param.parameterName, param.floatValue);
         }
-        else if (param.parameterType == AnimationParameter.ParameterType.Int)
+        else if (param.parameterType == AnimationParameter.ParameterType.Int && active)
         {
             anim.SetInteger(param.parameterName, param.intValue);
         }
