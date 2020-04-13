@@ -24,6 +24,19 @@ public class Health : MonoBehaviour
     private bool onITime = false;
     private bool onIFrames = false;
 
+    [SerializeField]
+    private Transform healthBarPrefab;
+
+    private HealthBar healthBar;
+
+    private void Awake(){
+        if (!healthBarPrefab) return;
+        healthBar = Instantiate(healthBarPrefab).GetComponent<HealthBar>();
+        healthBar.transform.parent = null;
+        healthBar.ConnectToObject(transform);
+    }
+
+
     private void Start()
     {
         currentHitPoints = maxHitPoints;
@@ -52,7 +65,7 @@ public class Health : MonoBehaviour
         }
 
         currentHitPoints -= amount;
-
+        UpdateHealthBar();
         return amount;
     }
 
@@ -70,6 +83,7 @@ public class Health : MonoBehaviour
         }
 
         currentHitPoints -= amount;
+        UpdateHealthBar();
 
         if (iTime > 0f)
         {
@@ -94,6 +108,8 @@ public class Health : MonoBehaviour
         // Ensure we are never above our max hit points 
         if (currentHitPoints > maxHitPoints) currentHitPoints = maxHitPoints;
 
+        UpdateHealthBar();
+
         return currentHitPoints;
     }
 
@@ -112,6 +128,7 @@ public class Health : MonoBehaviour
         float frac = currentHitPoints / maxHitPoints;
         maxHitPoints = newMax;
         currentHitPoints = (int)(maxHitPoints * frac);
+        UpdateHealthBar();
     }
 
     public void SetHealth(int newHealth)
@@ -120,6 +137,8 @@ public class Health : MonoBehaviour
 
         // Ensure we are never above our max hit points 
         if (currentHitPoints > maxHitPoints) currentHitPoints = maxHitPoints;
+
+        UpdateHealthBar();
     }
 
     public int GetMaxHealth()
@@ -136,6 +155,8 @@ public class Health : MonoBehaviour
             percent = 0;
 
         currentHitPoints = maxHitPoints * percent / 100;
+
+        UpdateHealthBar();
     }
 
     public void SetIFrames(bool newVal)
@@ -173,5 +194,10 @@ public class Health : MonoBehaviour
     {
         yield return new WaitForSeconds(iTime);
         onITime = false;
+    }
+
+    void UpdateHealthBar(){
+        if (!healthBar) return;
+        healthBar.SetHealthBar((float)currentHitPoints / (float)maxHitPoints);
     }
 }
