@@ -81,6 +81,7 @@ MonoBehaviour:
   maxAngle: 30
   projectileSpeed: 2
   invertFacingDir: 1
+  hostileStartRange: 0
 --- !u!58 &8786989000501270489
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,6 +116,8 @@ MonoBehaviour:
   maxHitPoints: 10
   currentHitPoints: 0
   iTime: 0.15
+  healthBarPrefab: {fileID: 427368274667939255, guid: 3988298ab86d7c44e80174abe8e4c4df,
+    type: 3}
 --- !u!114 &8786989000501270494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,11 +140,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8786989000501270488}
     m_Modifications:
-    - target: {fileID: 3949769225010457956, guid: 94c38313972263b4b81eec9fc592611b,
-        type: 3}
-      propertyPath: m_Name
-      value: BirdSprite
-      objectReference: {fileID: 0}
     - target: {fileID: 3949769225010457953, guid: 94c38313972263b4b81eec9fc592611b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -196,6 +194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3949769225010457956, guid: 94c38313972263b4b81eec9fc592611b,
+        type: 3}
+      propertyPath: m_Name
+      value: BirdSprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c38313972263b4b81eec9fc592611b, type: 3}
