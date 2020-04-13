@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: f08bd28029d173c4e8e50c990276f4c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7809427027255261939
+    second: Front_ Broken_Shoulder
+  - first:
+      213: 6741123312268227247
+    second: Front_Broken_Arm
+  - first:
+      213: -691758530485446846
+    second: Front_Broken_Fist
+  - first:
+      213: -6133915054953834213
+    second: Back_Broken_Shoulder
+  - first:
+      213: 5587737944889992168
+    second: Back_Broken_Arm
+  - first:
+      213: -4370709846770664924
+    second: Back_Broken_Fist
+  - first:
+      213: 2005925409773052325
+    second: Broken_Visor
+  - first:
+      213: -1663070666407609515
+    second: Broken_Head
+  - first:
+      213: -3587625370161497418
+    second: Broken_Torso
+  - first:
+      213: 261867588440021333
+    second: Front_Broken_Thigh
+  - first:
+      213: -2903268724011269409
+    second: Front_Broken_Shin
+  - first:
+      213: 3177887214916075949
+    second: Back_Broken_Thigh
+  - first:
+      213: 1365496288831414749
+    second: Back_Broken_Shin
+  - first:
+      213: -5261558786964296202
+    second: Front_Broken_Foot
+  - first:
+      213: -897127607440784735
+    second: Back_Broken_Foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Front_ Broken_Shoulder
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 208
+        width: 25
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4904845, y: 0.8320513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d058d1dae775f9390800000000000000
+      internalID: -7809427027255261939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Broken_Arm
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 208
+        width: 50
+        height: 22
+      alignment: 9
+      pivot: {x: 0.2149767, y: 0.5134964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa23adebfe74d8d50800000000000000
+      internalID: 6741123312268227247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Broken_Fist
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 213
+        width: 16
+        height: 17
+      alignment: 9
+      pivot: {x: 0.1021762, y: 0.4053713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247911818416666f0800000000000000
+      internalID: -691758530485446846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Broken_Shoulder
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 211
+        width: 25
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5229716, y: 0.8568417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b195e03a1c4ffdaa0800000000000000
+      internalID: -6133915054953834213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Broken_Arm
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 212
+        width: 50
+        height: 22
+      alignment: 9
+      pivot: {x: 0.1999702, y: 0.4851761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3a3274e02ab8d40800000000000000
+      internalID: 5587737944889992168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Broken_Fist
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 216
+        width: 15
+        height: 17
+      alignment: 9
+      pivot: {x: 0.1086558, y: 0.4424483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42abee62d8e1853c0800000000000000
+      internalID: -4370709846770664924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_Visor
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 175
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5146434, y: 0.3974991}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1e377488a76db10800000000000000
+      internalID: 2005925409773052325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_Head
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 167
+        width: 27
+        height: 23
+      alignment: 9
+      pivot: {x: 0.3438076, y: 0.2708044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bf66c4a069be8e0800000000000000
+      internalID: -1663070666407609515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_Torso
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 112
+        width: 59
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5357394, y: 0.07046904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba3850ebb1363ec0800000000000000
+      internalID: -3587625370161497418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Broken_Thigh
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 22
+        width: 19
+        height: 67
+      alignment: 9
+      pivot: {x: 0.4785875, y: 0.9007662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559d72b2f2752a300800000000000000
+      internalID: 261867588440021333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Broken_Shin
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 28
+        width: 27
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5046824, y: 0.8915717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd28ec94a7485b7d0800000000000000
+      internalID: -2903268724011269409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Broken_Thigh
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 23
+        width: 19
+        height: 67
+      alignment: 9
+      pivot: {x: 0.4785875, y: 0.9007662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da10455b59f1a1c20800000000000000
+      internalID: 3177887214916075949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Broken_Shin
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 28
+        width: 27
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5046824, y: 0.8915717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd129e5d3a733f210800000000000000
+      internalID: 1365496288831414749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Front_Broken_Foot
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 8
+        width: 34
+        height: 16
+      alignment: 9
+      pivot: {x: 0.368375, y: 0.576282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd682209203bf6b0800000000000000
+      internalID: -5261558786964296202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_Broken_Foot
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 9
+        width: 34
+        height: 16
+      alignment: 9
+      pivot: {x: 0.368375, y: 0.576282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2cb48b133cc83f0800000000000000
+      internalID: -897127607440784735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
