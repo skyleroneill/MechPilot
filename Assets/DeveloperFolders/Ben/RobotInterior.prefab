@@ -99,7 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4863590594415841024}
   - component: {fileID: 4863590594415841279}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: LadderTop (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
