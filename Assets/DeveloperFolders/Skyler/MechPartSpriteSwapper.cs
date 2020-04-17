@@ -9,7 +9,7 @@ public class MechPartSpriteSwapper : MonoBehaviour
     [SerializeField]
     private int subSpriteCount = 0;
     [SerializeField]
-    private Sprite[] subSpriteInstances;
+    private SpriteRenderer[] subSpriteInstances;
     [Range(0f, 100f)]
     [SerializeField]
     private float topThreshold = 90f;
@@ -22,6 +22,8 @@ public class MechPartSpriteSwapper : MonoBehaviour
     private Sprite[] level1DamageSprites;
     [SerializeField]
     private Sprite[] level2DamageSprites;
+
+    private Health hp;
 
     // Validate that the arrays are the same size and that thresholds aren't crossing
     void OnValidate()
@@ -67,6 +69,39 @@ public class MechPartSpriteSwapper : MonoBehaviour
         if (topThreshold <= bottomThreshold)
         {
             topThreshold = bottomThreshold + 0.1f;
+        }
+    }
+
+    private void Start()
+    {
+        hp = GetComponent<Health>();
+    }
+
+    private void Update()
+    {
+        float currHealthPercent = (hp.GetHealth() / hp.GetMaxHealth()) * 100f;
+        if (currHealthPercent >= topThreshold)
+        {
+            // Change to level 0 damage
+            SwapSprites(level0DamageSprites);
+        }
+        else if (currHealthPercent < topThreshold && currHealthPercent > bottomThreshold)
+        {
+            // Change to level 1 damage
+            SwapSprites(level1DamageSprites);
+        }
+        else if (currHealthPercent <= bottomThreshold)
+        {
+            // Change to level 2 damage
+            SwapSprites(level2DamageSprites);
+        }
+    }
+
+    private void SwapSprites(Sprite[] newSprites)
+    {
+        for(int i = 0; i < subSpriteCount; i++)
+        {
+            subSpriteInstances[i].sprite = newSprites[i];
         }
     }
 }
