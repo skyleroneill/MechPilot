@@ -55,7 +55,7 @@ TextureImporter:
     second: Damaged Torso
   - first:
       213: -2210911239066567431
-    second: Robot Sprite and Damaged_17
+    second: Back Shoulder
   - first:
       213: 6670199531232547006
     second: Robot Sprite and Damaged_18
@@ -113,6 +113,9 @@ TextureImporter:
   - first:
       213: 263084918332100878
     second: Damaged Back Foot
+  - first:
+      213: 5490862707822940973
+    second: Robot Sprite and Damaged_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -205,7 +208,7 @@ TextureImporter:
         width: 25
         height: 48
       alignment: 9
-      pivot: {x: 0.49048454, y: 0.8320513}
+      pivot: {x: 0.4904845, y: 0.8320513}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,7 +229,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 9
-      pivot: {x: 0.5146434, y: 0.39749908}
+      pivot: {x: 0.5146434, y: 0.3974991}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,7 +250,7 @@ TextureImporter:
         width: 27
         height: 23
       alignment: 9
-      pivot: {x: 0.34380764, y: 0.27080438}
+      pivot: {x: 0.3438076, y: 0.2708044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,8 +270,8 @@ TextureImporter:
         y: 208
         width: 25
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4904845, y: 0.8320513}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,8 +291,8 @@ TextureImporter:
         y: 211
         width: 25
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5229716, y: 0.8568417}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,7 +313,7 @@ TextureImporter:
         width: 50
         height: 22
       alignment: 9
-      pivot: {x: 0.21497665, y: 0.5134964}
+      pivot: {x: 0.2149767, y: 0.5134964}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,7 +334,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 9
-      pivot: {x: 0.10217619, y: 0.40537128}
+      pivot: {x: 0.1021762, y: 0.4053713}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -352,7 +355,7 @@ TextureImporter:
         width: 59
         height: 81
       alignment: 9
-      pivot: {x: 0.5357394, y: 0.070469044}
+      pivot: {x: 0.5357394, y: 0.07046904}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,8 +375,8 @@ TextureImporter:
         y: 208
         width: 50
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2149767, y: 0.5134964}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,8 +396,8 @@ TextureImporter:
         y: 213
         width: 16
         height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1021762, y: 0.4053713}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,8 +417,8 @@ TextureImporter:
         y: 212
         width: 50
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1999702, y: 0.4851761}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -435,8 +438,8 @@ TextureImporter:
         y: 216
         width: 15
         height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1086558, y: 0.4424483}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,36 +452,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Robot Sprite and Damaged_12
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 198
-        width: 53
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7208e2707be32b550800000000000000
-      internalID: 6175066994898796583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Damaged Visor
       rect:
         serializedVersion: 2
-        x: 339
-        y: 174
+        x: 340
+        y: 175
         width: 24
         height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5146434, y: 0.3974991}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -491,36 +473,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Robot Sprite and Damaged_14
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 185
-        width: 60
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f12969c7bdac16b0800000000000000
-      internalID: -5324189654589038092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Damaged Head
       rect:
         serializedVersion: 2
-        x: 376
+        x: 377
         y: 167
         width: 27
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3438076, y: 0.2708044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -536,12 +497,12 @@ TextureImporter:
       name: Damaged Torso
       rect:
         serializedVersion: 2
-        x: 405
-        y: 113
+        x: 407
+        y: 112
         width: 59
         height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5357394, y: 0.07046904}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -554,7 +515,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Robot Sprite and Damaged_17
+      name: Back Shoulder
       rect:
         serializedVersion: 2
         x: 8
@@ -562,7 +523,7 @@ TextureImporter:
         width: 25
         height: 48
       alignment: 9
-      pivot: {x: 0.5229716, y: 0.85684174}
+      pivot: {x: 0.5229716, y: 0.8568417}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -583,7 +544,7 @@ TextureImporter:
         width: 50
         height: 22
       alignment: 9
-      pivot: {x: 0.19997017, y: 0.4851761}
+      pivot: {x: 0.1999702, y: 0.4851761}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -604,7 +565,7 @@ TextureImporter:
         width: 15
         height: 17
       alignment: 9
-      pivot: {x: 0.1086558, y: 0.44244835}
+      pivot: {x: 0.1086558, y: 0.4424483}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -625,7 +586,7 @@ TextureImporter:
         width: 29
         height: 72
       alignment: 9
-      pivot: {x: 0.50468236, y: 0.8915717}
+      pivot: {x: 0.5046824, y: 0.8915717}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -646,7 +607,7 @@ TextureImporter:
         width: 29
         height: 72
       alignment: 9
-      pivot: {x: 0.44269904, y: 0.88842404}
+      pivot: {x: 0.5046824, y: 0.8915717}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -666,8 +627,8 @@ TextureImporter:
         y: 22
         width: 19
         height: 67
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4785875, y: 0.9007662}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -687,8 +648,8 @@ TextureImporter:
         y: 28
         width: 27
         height: 72
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5046824, y: 0.8915717}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -708,8 +669,8 @@ TextureImporter:
         y: 23
         width: 19
         height: 67
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4785875, y: 0.9007662}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -729,8 +690,8 @@ TextureImporter:
         y: 29
         width: 27
         height: 72
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5046824, y: 0.8915717}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -751,7 +712,7 @@ TextureImporter:
         width: 19
         height: 67
       alignment: 9
-      pivot: {x: 0.4785873, y: 0.88862175}
+      pivot: {x: 0.4785875, y: 0.9007662}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -772,7 +733,7 @@ TextureImporter:
         width: 34
         height: 16
       alignment: 9
-      pivot: {x: 0.34444404, y: 0.60170937}
+      pivot: {x: 0.368375, y: 0.576282}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -814,7 +775,7 @@ TextureImporter:
         width: 34
         height: 16
       alignment: 9
-      pivot: {x: 0.368375, y: 0.57628196}
+      pivot: {x: 0.368375, y: 0.576282}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -831,11 +792,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 309
-        y: 9
+        y: 8
         width: 34
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.368375, y: 0.576282}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -855,8 +816,8 @@ TextureImporter:
         y: 9
         width: 34
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.368375, y: 0.576282}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

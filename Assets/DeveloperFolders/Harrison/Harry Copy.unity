@@ -608,7 +608,7 @@ SpriteRenderer:
   m_Size: {x: 3.7916667, y: 7.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &53959458
@@ -1454,7 +1454,7 @@ SpriteRenderer:
   m_Size: {x: 3.25, y: 6.6666665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &192588455
@@ -1536,7 +1536,7 @@ SpriteRenderer:
   m_Size: {x: 1.9583334, y: 6.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &194883782
@@ -1820,7 +1820,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5416665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &228497874
@@ -2180,7 +2180,7 @@ SpriteRenderer:
   m_Size: {x: 3.6666667, y: 3.8333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &306780651
@@ -3706,7 +3706,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &506389912
@@ -4691,11 +4691,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03135083ea9f75a44bf715f72cc29d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mechPart: {fileID: 1160938556}
+  mechPart: {fileID: 0}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1335061877}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!1 &598773758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,7 +5744,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 10.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &675099753
@@ -6009,7 +6012,7 @@ SpriteRenderer:
   m_Size: {x: 1.875, y: 6.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &710522633
@@ -6091,7 +6094,7 @@ SpriteRenderer:
   m_Size: {x: 1.9583334, y: 6.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &720255868
@@ -6971,7 +6974,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &789076465
@@ -7703,9 +7706,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 122928933}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1335061877}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &844177225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8535,7 +8541,7 @@ SpriteRenderer:
   m_Size: {x: 3.25, y: 6.6666665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &918309124
@@ -10415,18 +10421,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155227505}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1160938556 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2108645127705200652, guid: 29e00bc360776e341ab4eb4893f58111,
-    type: 3}
-  m_PrefabInstance: {fileID: 2108645127940285640}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e81a4671cc10a4544be855afe69d219e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1173779004
 GameObject:
   m_ObjectHideFlags: 0
@@ -10870,9 +10864,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 1118825679}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1335061877}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &1212903668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11329,7 +11326,7 @@ SpriteRenderer:
   m_Size: {x: 3.6666667, y: 3.8333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1262794660
@@ -11996,9 +11993,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechPart: {fileID: 2034191795}
   activationKey: 101
+  repairKey: 113
   pilot: {fileID: 1335061877}
   canActivate: 1
   checkPartHealth: 1
+  repairCooldown: 0.5
+  repairRate: 1
 --- !u!61 &1400222422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12678,7 +12678,7 @@ SpriteRenderer:
   m_Size: {x: 3.7083333, y: 1.5416666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1523688877
@@ -13468,7 +13468,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1663829522
@@ -14659,7 +14659,7 @@ SpriteRenderer:
   m_Size: {x: 3.7083333, y: 1.5416666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1826895445
@@ -15011,7 +15011,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1853936449
@@ -15948,7 +15948,7 @@ SpriteRenderer:
   m_Size: {x: 1.9583334, y: 6.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1918539464
@@ -17022,7 +17022,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 10.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2026847464
@@ -17104,7 +17104,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5416665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2034191795 stripped
@@ -17277,7 +17277,7 @@ SpriteRenderer:
   m_Size: {x: 1.875, y: 6.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2056669922
@@ -18203,3 +18203,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
+--- !u!1 &2108645127940285641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2108645127616032456, guid: 29e00bc360776e341ab4eb4893f58111,
+    type: 3}
+  m_PrefabInstance: {fileID: 2108645127940285640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2108645127940285642
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108645127940285641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36195f8cf14c9214eb408fa3057ceb22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
