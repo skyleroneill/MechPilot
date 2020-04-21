@@ -114,7 +114,7 @@ MonoBehaviour:
   debug: 0
   godMode: 0
   buddhaMode: 0
-  maxHitPoints: 10
+  maxHitPoints: 30
   currentHitPoints: 0
   iTime: 0.15
   healthBarPrefab: {fileID: 427368274667939255, guid: 3988298ab86d7c44e80174abe8e4c4df,
