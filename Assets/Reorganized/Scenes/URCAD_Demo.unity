@@ -3837,7 +3837,7 @@ GameObject:
   - component: {fileID: 418797497}
   - component: {fileID: 418797496}
   m_Layer: 0
-  m_Name: Hell Ambiance. DO NOT ENABLE. DO NOT ENABLE!
+  m_Name: Hell Ambience . DO NOT ENABLE. DO NOT ENABLE!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11716,7 +11716,7 @@ GameObject:
   - component: {fileID: 1422437387}
   - component: {fileID: 1422437386}
   m_Layer: 0
-  m_Name: Ambiance
+  m_Name: 'Ambience '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
