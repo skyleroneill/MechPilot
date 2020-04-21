@@ -69,11 +69,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d52f1426354b34885d0d7a34d5cf2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 600
-  MaxVelocity: 6
+  force: 800
+  MaxVelocity: 10
   minRadius: 8
   maxRadius: 12
-  targetChangeTime: 2
+  targetChangeTime: 0.5
   shootTime: 5
   projectile: {fileID: 3166870183736439085, guid: 3f7def5568f4f1f48859a06d242ec4f8,
     type: 3}

@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b73621aaa9afcb43bb37cf9a5d2a499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agroRange: 10
-  speed: 1
+  agroRange: 11
+  speed: 1.5
   attackDistance: 6
   attackCooldown: 3
   attackForce: 8

@@ -80,7 +80,7 @@ MonoBehaviour:
     type: 3}
   minAngle: -30
   maxAngle: 30
-  projectileSpeed: 2
+  projectileSpeed: 4
   invertFacingDir: 0
   hostileStartRange: 0
 --- !u!58 &8786989000501270489
