@@ -202,6 +202,7 @@ MonoBehaviour:
   attackDistance: 6
   attackCooldown: 3
   attackForce: 8
+  hostileStartRange: 13
 --- !u!114 &6125696763797139039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +218,7 @@ MonoBehaviour:
   debug: 0
   godMode: 0
   buddhaMode: 0
-  maxHitPoints: 4
+  maxHitPoints: 8
   currentHitPoints: 0
   iTime: 0.15
   healthBarPrefab: {fileID: 427368274667939255, guid: 3988298ab86d7c44e80174abe8e4c4df,

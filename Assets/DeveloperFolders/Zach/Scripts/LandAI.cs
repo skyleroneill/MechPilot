@@ -27,7 +27,11 @@ public class LandAI : MonoBehaviour{
 
     float lookDir;
 
-    
+    [SerializeField]
+    float hostileStartRange;
+    bool hostile = false;
+
+
     private void Awake() {
        target = GameObject.Find("ProtoBot_Head").transform;
        rb = GetComponent<Rigidbody2D>();
@@ -35,6 +39,8 @@ public class LandAI : MonoBehaviour{
     }
 
    private void Update() {
+        CheckHostility();
+        if (!hostile) return;
         Vector2 dif = target.position - transform.position;
         float distance = dif.magnitude;
         Vector2 dir = dif.normalized;
@@ -42,8 +48,7 @@ public class LandAI : MonoBehaviour{
         anim.transform.localScale = new Vector2(lookDir, 1);
 
         if(Mathf.Abs(dif.x) < attackDistance)Attack(dir);
-        else if(Mathf.Abs(dif.x) < agroRange)Move(dir);
-        else anim.SetFloat("Speed", rb.velocity.magnitude);
+        else Move(dir);
             
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.01f);
         if(!hit)
@@ -78,4 +83,21 @@ public class LandAI : MonoBehaviour{
 
 
    }
+
+    void CheckHostility()
+    {
+
+        if (Mathf.Abs((target.position - transform.position).x) < hostileStartRange) hostile = true;
+
+        if (hostileStartRange == 0) hostile = true;
+        if (GetComponent<Health>().GetMaxHealth() != GetComponent<Health>().GetHealth())
+        {
+            hostile = true;
+            print("NO" + GetComponent<Health>().GetMaxHealth() + " " + GetComponent<Health>().GetHealth());
+        }
+        if (hostile)
+        {
+            GetComponentInChildren<Animator>().SetBool("Hostile", true);
+        }
+    }
 }

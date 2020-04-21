@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DeveloperFolders/Zach/Scene/Zachs Menu.unity
     guid: a53c1a18195a3da479a3044ea615e342
-  - enabled: 1
+  - enabled: 0
     path: Assets/DeveloperFolders/Skyler/SkylerTestSceneNowWithPlatforms.unity
     guid: 0e9f58049e78ad14888d569242468e5d
+  - enabled: 1
+    path: Assets/Reorganized/Scenes/URCAD_Demo.unity
+    guid: 64e3930a41dd73547938f8b2e10d7474
   m_configObjects: {}

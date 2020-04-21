@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 5951345266240737886}
   - component: {fileID: 1763144611787933129}
   - component: {fileID: 6123015930269092786}
-  - component: {fileID: -4074124642754709698}
-  - component: {fileID: -915250872914879336}
-  - component: {fileID: 6716434019650640216}
+  - component: {fileID: 4058320359556819018}
+  - component: {fileID: -7791418775584605631}
+  - component: {fileID: 303344650993841466}
   m_Layer: 0
-  m_Name: Egg
+  m_Name: Egg 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2d03478507290b346b8a8803a5e4bed0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c314438e3f5f5846a1d6f1d81e13d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 8786989000501270469, guid: 00b03508a91c0844fa525168cb004a63, type: 3}
+  obj: {fileID: 8786989000501270469, guid: d7f54e71a001eea4588eb275744323b7, type: 3}
 --- !u!114 &6123015930269092786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hatchRange: 8
---- !u!114 &-4074124642754709698
+--- !u!114 &4058320359556819018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   particles: {fileID: 0}
   deathSpawns: []
   powerUpDropChance: 10
---- !u!114 &-915250872914879336
+--- !u!114 &-7791418775584605631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,7 +167,7 @@ MonoBehaviour:
   iTime: 0.15
   healthBarPrefab: {fileID: 427368274667939255, guid: 3988298ab86d7c44e80174abe8e4c4df,
     type: 3}
---- !u!61 &6716434019650640216
+--- !u!61 &303344650993841466
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

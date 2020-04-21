@@ -139,6 +139,6 @@ MonoBehaviour:
   ignoreLayers:
     serializedVersion: 2
     m_Bits: 1280
-  lifeTime: 10
+  lifeTime: 0.5
   moveForward: 1
   destroyOnHit: 1

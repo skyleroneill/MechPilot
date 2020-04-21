@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Awake(){
         front = transform.Find("Back").Find("Front");
+        HideBar();
     }
 
     public void ConnectToObject(Transform obj){
@@ -22,8 +23,21 @@ public class HealthBar : MonoBehaviour
         print("BAR " + percent);
         Vector3 newScale = front.transform.localScale;
         newScale.SetX(percent);
+        
         front.transform.localScale = newScale;
         if (percent <= 0) Destroy(gameObject);
+        if (percent >= 1) HideBar();
+        else ShowBar();
+    }
+
+    void HideBar()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    void ShowBar()
+    {
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     private void Update()
