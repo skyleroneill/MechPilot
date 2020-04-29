@@ -821,12 +821,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2108645126588594913, guid: 29e00bc360776e341ab4eb4893f58111,
-        type: 3}
-      propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].projectile
-      value: 
-      objectReference: {fileID: 3166870183736439081, guid: 5baf554abef9ca84db033d876cf177d9,
-        type: 3}
     - target: {fileID: 2108645127616032456, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
       propertyPath: m_Name

@@ -79,7 +79,8 @@ public class MechPartSpriteSwapper : MonoBehaviour
 
     private void Update()
     {
-        float currHealthPercent = (hp.GetHealth() / hp.GetMaxHealth()) * 100f;
+        float currHealthPercent = ((float)hp.GetHealth() / (float)hp.GetMaxHealth()) * 100f;
+        Debug.Log(currHealthPercent);
         if (currHealthPercent >= topThreshold)
         {
             // Change to level 0 damage
