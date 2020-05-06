@@ -608,7 +608,7 @@ SpriteRenderer:
   m_Size: {x: 3.7916667, y: 7.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &53959458
@@ -1454,7 +1454,7 @@ SpriteRenderer:
   m_Size: {x: 3.25, y: 6.6666665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &192588455
@@ -1536,7 +1536,7 @@ SpriteRenderer:
   m_Size: {x: 1.9583334, y: 6.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &194883782
@@ -1820,7 +1820,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5416665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &228497874
@@ -2180,7 +2180,7 @@ SpriteRenderer:
   m_Size: {x: 3.6666667, y: 3.8333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &306780651
@@ -3706,7 +3706,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &506389912
@@ -4091,6 +4091,7 @@ MonoBehaviour:
   maxHitPoints: 1
   currentHitPoints: 1
   iTime: 0.15
+  healthBarPrefab: {fileID: 0}
 --- !u!61 &545833105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5397,6 +5398,7 @@ MonoBehaviour:
   maxHitPoints: 1
   currentHitPoints: 1
   iTime: 0.15
+  healthBarPrefab: {fileID: 0}
 --- !u!61 &656700864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5744,7 +5746,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 10.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &675099753
@@ -6012,7 +6014,7 @@ SpriteRenderer:
   m_Size: {x: 1.875, y: 6.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &710522633
@@ -6094,7 +6096,7 @@ SpriteRenderer:
   m_Size: {x: 1.9583334, y: 6.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &720255868
@@ -6974,7 +6976,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &789076465
@@ -7280,6 +7282,7 @@ MonoBehaviour:
   maxHitPoints: 1
   currentHitPoints: 1
   iTime: 0.15
+  healthBarPrefab: {fileID: 0}
 --- !u!61 &811076268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8541,7 +8544,7 @@ SpriteRenderer:
   m_Size: {x: 3.25, y: 6.6666665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &918309124
@@ -11326,7 +11329,7 @@ SpriteRenderer:
   m_Size: {x: 3.6666667, y: 3.8333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1262794660
@@ -12678,7 +12681,7 @@ SpriteRenderer:
   m_Size: {x: 3.7083333, y: 1.5416666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1523688877
@@ -13468,7 +13471,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1663829522
@@ -14659,7 +14662,7 @@ SpriteRenderer:
   m_Size: {x: 3.7083333, y: 1.5416666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1826895445
@@ -14714,6 +14717,7 @@ MonoBehaviour:
   maxHitPoints: 1
   currentHitPoints: 1
   iTime: 0.15
+  healthBarPrefab: {fileID: 0}
 --- !u!61 &1826895448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15011,7 +15015,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1853936449
@@ -15829,6 +15833,7 @@ MonoBehaviour:
   maxHitPoints: 1
   currentHitPoints: 1
   iTime: 0.15
+  healthBarPrefab: {fileID: 0}
 --- !u!114 &1909464379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15948,7 +15953,7 @@ SpriteRenderer:
   m_Size: {x: 1.9583334, y: 6.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1918539464
@@ -16258,6 +16263,7 @@ MonoBehaviour:
   maxHitPoints: 1
   currentHitPoints: 1
   iTime: 0.15
+  healthBarPrefab: {fileID: 0}
 --- !u!61 &1950370694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17022,7 +17028,7 @@ SpriteRenderer:
   m_Size: {x: 2.2083333, y: 10.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2026847464
@@ -17104,7 +17110,7 @@ SpriteRenderer:
   m_Size: {x: 1.9166666, y: 7.5416665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2034191795 stripped
@@ -17277,7 +17283,7 @@ SpriteRenderer:
   m_Size: {x: 1.875, y: 6.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2056669922
