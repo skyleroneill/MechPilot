@@ -115,6 +115,7 @@ public class Projectile : MonoBehaviour
     public void SetDirection(Vector3 d)
     {
         dir = d.normalized;
+        transform.eulerAngles = new Vector3(0,0,Vector3.SignedAngle(Vector3.up, d, Vector3.forward));
     }
 
     public void SetSpeed(float s)

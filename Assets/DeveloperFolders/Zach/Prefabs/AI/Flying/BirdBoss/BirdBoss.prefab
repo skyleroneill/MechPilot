@@ -76,7 +76,7 @@ MonoBehaviour:
   maxRadius: 14
   targetChangeTime: 6
   shootTime: 5
-  projectile: {fileID: 3166870183736439085, guid: a373bc5ada3f00f4d95ae5ecb2e5a3e2,
+  projectile: {fileID: 3166870183736439085, guid: 1860806ed580abe4e8eb63e084440dc3,
     type: 3}
   minAngle: -30
   maxAngle: 30

@@ -1,5 +1,6 @@
 ﻿#region Imports 
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,8 +59,8 @@ public class FlyingAI : MonoBehaviour{
         if(curChangeTimer < targetChangeTime)
             return;
         curChangeTimer = 0;
-        targetDistance = minRadius + Random.value * (maxRadius-minRadius);
-        targetAngle = minAngle + Random.value * (maxAngle-minAngle);
+        targetDistance = minRadius + UnityEngine.Random.value * (maxRadius-minRadius);
+        targetAngle = minAngle + UnityEngine.Random.value * (maxAngle-minAngle);
     }
 
 
@@ -89,7 +90,13 @@ public class FlyingAI : MonoBehaviour{
 
         Transform newProjectile = Instantiate(projectile, null);
         newProjectile.position = transform.position;
-        Vector2 dir = (target.position - transform.position).normalized;
+
+        float random = UnityEngine.Random.value * 5;
+        Vector3 targetPosition = target.position;
+        bool aimAtHead = (UnityEngine.Random.value - .3 < 0);
+        if(!aimAtHead)
+        targetPosition -= Vector3.up*random;
+        Vector2 dir = (targetPosition - transform.position).normalized;
         //newProjectile.GetComponent<Rigidbody2D>().velocity = dir * projectileSpeed;
         newProjectile.GetComponent<Projectile>().SetDirection(dir);
         newProjectile.GetComponent<Projectile>().SetSpeed(projectileSpeed);

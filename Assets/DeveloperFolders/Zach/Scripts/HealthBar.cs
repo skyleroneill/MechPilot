@@ -7,6 +7,14 @@ public class HealthBar : MonoBehaviour
     Transform front;
 
     Transform target;
+    [SerializeField]
+    bool followTarget = true;
+
+    [SerializeField]
+    bool canHide = true;
+
+    [SerializeField]
+    bool destroyOnZero = true;
 
     // Start is called before the first frame update
     void Awake(){
@@ -21,17 +29,21 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealthBar(float percent){
         print("BAR " + percent);
+
+        if (percent < 0) percent = 0;
+
         Vector3 newScale = front.transform.localScale;
         newScale.SetX(percent);
         
         front.transform.localScale = newScale;
-        if (percent <= 0) Destroy(gameObject);
+        if (percent <= 0 && destroyOnZero) Destroy(gameObject);
         if (percent >= 1) HideBar();
         else ShowBar();
     }
 
     void HideBar()
     {
+        if (!canHide) return;
         transform.GetChild(0).gameObject.SetActive(false);
     }
 
@@ -42,6 +54,7 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
+        if (!followTarget) return;
         transform.position = target.position + Vector3.up * 3;
     }
 }

@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 3166870183736439083}
   - component: {fileID: 3166870183736439086}
   - component: {fileID: 3166870183736439082}
-  - component: {fileID: 6281762907921407216}
-  - component: {fileID: 5750693727485174384}
-  m_Layer: 0
-  m_Name: MechHeadBullet
+  m_Layer: 11
+  m_Name: SmallFeatherRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3166870183736439081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.744, y: -3.432, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f717d4f9d9be0ec45ae6181302eebd58, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0527db2ee62dd8046824a31a8f342496, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,46 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7819a13a0f3ad68449def53ca66a414f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   power: 1
   ignoreLayers:
     serializedVersion: 2
-    m_Bits: 1280
-  lifeTime: 0.5
+    m_Bits: 2304
+  lifeTime: 30
   moveForward: 1
-  destroyOnHit: 0
---- !u!95 &6281762907921407216
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3166870183736439081}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 333f997ed138dc248bd6cdaadc6f2f69, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5750693727485174384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3166870183736439081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b91b82558686ae419f9d6c75483f4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xInFacingDirection: 0
-  invert: 0
-  velocity: {x: 0, y: 0}
-  angularVelocity: -30
+  destroyOnHit: 1

@@ -460,7 +460,8 @@ MonoBehaviour:
   maxHitPoints: 10
   currentHitPoints: 0
   iTime: 0.15
-  healthBarPrefab: {fileID: 0}
+  healthBarPrefab: {fileID: 427368274667939255, guid: a963c4385471b5945a1951a2d876d0e8,
+    type: 3}
 --- !u!1 &466730325070226554
 GameObject:
   m_ObjectHideFlags: 0

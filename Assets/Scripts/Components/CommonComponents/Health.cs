@@ -26,14 +26,24 @@ public class Health : MonoBehaviour
 
     [SerializeField]
     private Transform healthBarPrefab;
+    [SerializeField]
+    bool externalHealthBar = false;
 
     private HealthBar healthBar;
 
     private void Awake(){
         if (!healthBarPrefab) return;
-        healthBar = Instantiate(healthBarPrefab).GetComponent<HealthBar>();
-        healthBar.transform.parent = null;
-        healthBar.ConnectToObject(transform);
+        if (!externalHealthBar)
+        {
+            healthBar = Instantiate(healthBarPrefab).GetComponent<HealthBar>();
+            healthBar.transform.parent = null;
+            healthBar.ConnectToObject(transform);
+        }
+        else
+        {
+            healthBar = healthBarPrefab.GetComponent<HealthBar>();
+            healthBar.ConnectToObject(transform);
+        }
     }
 
 
