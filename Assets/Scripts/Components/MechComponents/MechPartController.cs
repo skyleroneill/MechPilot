@@ -64,6 +64,12 @@ public struct AnimationEffect
 {
     public AnimationParameter animationParameter;
 }
+
+[System.Serializable]
+public struct DestroyObjectsChildrenEffect
+{
+    public Transform parentObject;
+}
 #endregion Ability Effect Structs
 
 #region Auxilary Structs
@@ -100,6 +106,7 @@ public struct KeyDownEffects
     public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
     public AnimationEffect[] animationEffects;
+    public DestroyObjectsChildrenEffect[] destroyObjectsChildrenEffects;
 }
 
 [System.Serializable]
@@ -110,6 +117,7 @@ public struct KeyUpEffects
     public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
     public AnimationEffect[] animationEffects;
+    public DestroyObjectsChildrenEffect[] destroyObjectsChildrenEffects;
 }
 
 [System.Serializable]
@@ -120,6 +128,17 @@ public struct KeyHoldEffects
     public MeleeEffect[] meleeEffects;
     public MoveEffect[] moveEffects;
     public AnimationEffect[] animationEffects;
+    public DestroyObjectsChildrenEffect[] destroyObjectsChildrenEffects;
+}
+
+[System.Serializable]
+public struct InactiveEffects
+{
+    public ProjectileEffect[] projectileEffects;
+    public MeleeEffect[] meleeEffects;
+    public MoveEffect[] moveEffects;
+    public AnimationEffect[] animationEffects;
+    public DestroyObjectsChildrenEffect[] destroyObjectsChildrenEffects;
 }
 #endregion Key Input Structs
 
@@ -135,6 +154,7 @@ public class MechPartController : MonoBehaviour
     public KeyDownEffects[] keyDownEffects;
     public KeyUpEffects[] keyUpEffects;
     public KeyHoldEffects[] keyHoldEffects;
+    public InactiveEffects[] inactiveEffects;
     #endregion Public Variables
 
     #region Private Variables
@@ -173,6 +193,7 @@ public class MechPartController : MonoBehaviour
     {
         if (!active)
         {
+            Inactive();
             return;
         }
 
@@ -260,6 +281,16 @@ public class MechPartController : MonoBehaviour
                 {
                     StartCoroutine(PlayAnimation(keyUpEffects[i].animationEffects[j].animationParameter));
                 }
+
+                // Destroy children effects
+                for (j = 0; j < keyUpEffects[i].destroyObjectsChildrenEffects.Length; j++)
+                {
+                    int numChildren = keyUpEffects[i].destroyObjectsChildrenEffects[j].parentObject.childCount;
+                    for(int z = 0; z < numChildren; z++)
+                    {
+                        Destroy(keyUpEffects[i].destroyObjectsChildrenEffects[j].parentObject.GetChild(z).gameObject);
+                    }
+                }
             }
         }
     }
@@ -296,6 +327,53 @@ public class MechPartController : MonoBehaviour
                 for (j = 0; j < keyHoldEffects[i].animationEffects.Length; j++)
                 {
                     StartCoroutine(PlayAnimation(keyHoldEffects[i].animationEffects[j].animationParameter));
+                }
+            }
+        }
+    }
+
+    private void Inactive()
+    {
+        int i;
+        int j;
+        for (i = 0; i < inactiveEffects.Length; i++)
+        {
+            // Perform effects if part is not currently active
+            if (!active)
+            {
+
+                // Projectile effects
+                for (j = 0; j < inactiveEffects[i].projectileEffects.Length; j++)
+                {
+                    PerformProjectileEffect(inactiveEffects[i].projectileEffects[j], KeyType.KeyUp, i, j);
+                }
+
+                // Melee effects
+                for (j = 0; j < inactiveEffects[i].meleeEffects.Length; j++)
+                {
+                    PerformMeleeEffect(inactiveEffects[i].meleeEffects[j], KeyType.KeyUp, i, j);
+                }
+
+                // Move effects
+                for (j = 0; j < inactiveEffects[i].moveEffects.Length; j++)
+                {
+                    PerformMoveEffect(inactiveEffects[i].moveEffects[j], KeyType.KeyUp, i, j);
+                }
+
+                // Animation effects
+                for (j = 0; j < inactiveEffects[i].animationEffects.Length; j++)
+                {
+                    StartCoroutine(PlayAnimation(inactiveEffects[i].animationEffects[j].animationParameter));
+                }
+
+                // Destroy children effects
+                for (j = 0; j < inactiveEffects[i].destroyObjectsChildrenEffects.Length; j++)
+                {
+                    int numChildren = inactiveEffects[i].destroyObjectsChildrenEffects[j].parentObject.childCount;
+                    for (int z = 0; z < numChildren; z++)
+                    {
+                        Destroy(inactiveEffects[i].destroyObjectsChildrenEffects[j].parentObject.GetChild(z).gameObject);
+                    }
                 }
             }
         }

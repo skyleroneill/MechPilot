@@ -19,7 +19,9 @@ public class HitBox : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, lifeTime);
+        if(lifeTime > 0f)
+            Destroy(gameObject, lifeTime);
+
         SetLayerNumbers();
     }
 
