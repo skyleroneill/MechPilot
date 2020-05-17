@@ -68792,6 +68792,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4863590594849979606, guid: 1e3c8447ca4c2194e8d8df16114dbd94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4863590595076110214, guid: 1e3c8447ca4c2194e8d8df16114dbd94,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68851,6 +68856,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RobotInterior
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863590595396979679, guid: 1e3c8447ca4c2194e8d8df16114dbd94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5613437635448767018, guid: 1e3c8447ca4c2194e8d8df16114dbd94,
         type: 3}
@@ -77485,39 +77495,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 122928932, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
-      propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].power
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 389570027, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
       propertyPath: healthBarPrefab
       value: 
       objectReference: {fileID: 140259169}
-    - target: {fileID: 389570027, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
-      propertyPath: externalHealthBar
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1207763843, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
       propertyPath: healthBarPrefab
       value: 
       objectReference: {fileID: 1915228004}
-    - target: {fileID: 1207763843, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
-      propertyPath: externalHealthBar
+    - target: {fileID: 1347801574, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347801574, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.18823531
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347801574, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.11764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347801574, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
+      propertyPath: m_BackGroundColor.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1394158412, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
       propertyPath: healthBarPrefab
       value: 
       objectReference: {fileID: 10581056}
-    - target: {fileID: 1394158412, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
-      propertyPath: externalHealthBar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2108645127505555443, guid: 29e00bc360776e341ab4eb4893f58111,
-        type: 3}
-      propertyPath: keyDownEffects.Array.data[0].meleeEffects.Array.data[0].power
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2108645127616032456, guid: 29e00bc360776e341ab4eb4893f58111,
         type: 3}
       propertyPath: m_Name
@@ -77583,11 +77588,6 @@ PrefabInstance:
       propertyPath: healthBarPrefab
       value: 
       objectReference: {fileID: 1269505128}
-    - target: {fileID: 5243494046293660190, guid: 29e00bc360776e341ab4eb4893f58111,
-        type: 3}
-      propertyPath: externalHealthBar
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e00bc360776e341ab4eb4893f58111, type: 3}
 --- !u!114 &2108645127940285641 stripped

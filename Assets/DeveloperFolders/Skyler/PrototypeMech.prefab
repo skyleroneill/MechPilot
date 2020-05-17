@@ -390,7 +390,7 @@ MonoBehaviour:
     - projectile: {fileID: 3166870183736439081, guid: 5cf524b51b2d3794787f5f2911ca4f68,
         type: 3}
       firePoint: {fileID: 1697995845}
-      power: 1
+      power: 2
       energyUsage: 0
       coolDown: 4
       speed: 2.5
@@ -460,8 +460,8 @@ MonoBehaviour:
   maxHitPoints: 10
   currentHitPoints: 0
   iTime: 0.15
-  healthBarPrefab: {fileID: 427368274667939255, guid: a963c4385471b5945a1951a2d876d0e8,
-    type: 3}
+  healthBarPrefab: {fileID: 0}
+  externalHealthBar: 1
 --- !u!1 &466730325070226554
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +601,7 @@ MonoBehaviour:
   currentHitPoints: 0
   iTime: 0.15
   healthBarPrefab: {fileID: 0}
+  externalHealthBar: 1
 --- !u!114 &389570028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,6 +956,7 @@ MonoBehaviour:
   currentHitPoints: 0
   iTime: 0.15
   healthBarPrefab: {fileID: 0}
+  externalHealthBar: 1
 --- !u!114 &1207763844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,6 +1047,7 @@ MonoBehaviour:
   currentHitPoints: 0
   iTime: 0.15
   healthBarPrefab: {fileID: 0}
+  externalHealthBar: 1
 --- !u!114 &1394158413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,7 +2112,7 @@ PrefabInstance:
     - target: {fileID: 3774463957355459086, guid: 65b123f07e2bc8647a9b8678f42a6393,
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].projectileEffects.Array.data[0].power
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3774463957355459086, guid: 65b123f07e2bc8647a9b8678f42a6393,
         type: 3}
@@ -2392,7 +2395,7 @@ PrefabInstance:
     - target: {fileID: 6181533306493378102, guid: e42228cc8112b1247a966a2cd97e16fd,
         type: 3}
       propertyPath: keyDownEffects.Array.data[0].meleeEffects.Array.data[0].power
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6181533306493378102, guid: e42228cc8112b1247a966a2cd97e16fd,
         type: 3}
